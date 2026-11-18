@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "project-graph manifest",
+  "description": "Additive keys only: generators may add fields, never remove or rename existing ones.",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["project", "template_version", "generated_at", "source_commit", "nodes", "edges"],
+  "properties": {
+    "project": { "type": "string" },
+    "template_version": { "type": "string" },
+    "generated_at": { "type": "string" },
+    "source_commit": { "type": "string" },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "type", "source", "attrs"],
+        "properties": {
+          "id": { "type": "string" },
+          "type": { "type": "string" },
+          "source": { "type": "string" },
+          "attrs": { "type": "object" }
+        }
+      }
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["src", "dst", "rel", "evidence"],
+        "properties": {
+          "src": { "type": "string" },
+          "dst": { "type": "string" },
+          "rel": { "type": "string" },
+          "evidence": { "type": "string" }
+        }
+      }
+    }
+  }
+}
