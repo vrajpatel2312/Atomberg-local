@@ -1,0 +1,19 @@
+{
+  "deterministic": true,
+  "excludes": [
+    "node_modules",
+    ".git",
+    "secrets",
+    "*.pem",
+    ".env"
+  ],
+  "output": "Documentation/architecture/codebase-graph.json",
+  "project": "atomberg-local",
+  "secrets_policy": "names only \u2014 secret values are never indexed",
+  "sources": [
+    "src",
+    "scripts",
+    "docs"
+  ],
+  "version": "0.1.0"
+}
