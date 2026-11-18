@@ -12,6 +12,24 @@
       "evidence": "atomberg_send_command.py:5",
       "rel": "requires",
       "src": "script:atomberg_send_command.py"
+    },
+    {
+      "dst": "script:generator/diagnostics.py",
+      "evidence": "generator/project_graph.py:35",
+      "rel": "requires",
+      "src": "script:generator/project_graph.py"
+    },
+    {
+      "dst": "script:generator/extractors.py",
+      "evidence": "generator/project_graph.py:15",
+      "rel": "requires",
+      "src": "script:generator/project_graph.py"
+    },
+    {
+      "dst": "script:generator/manifest.py",
+      "evidence": "generator/project_graph.py:32",
+      "rel": "requires",
+      "src": "script:generator/project_graph.py"
     }
   ],
   "gaps": [
@@ -31,6 +49,26 @@
       "item": ".cache-docs/openapi.yaml mentions secret-shaped name 'token' (value not recorded)"
     },
     {
+      "evidence": "Documentation/architecture/codebase-graph.json:20",
+      "id": "secret-name:Documentation/architecture/codebase-graph.json:access_token",
+      "item": "Documentation/architecture/codebase-graph.json mentions secret-shaped name 'access_token' (value not recorded)"
+    },
+    {
+      "evidence": "Documentation/architecture/codebase-graph.json:25",
+      "id": "secret-name:Documentation/architecture/codebase-graph.json:get_access_token",
+      "item": "Documentation/architecture/codebase-graph.json mentions secret-shaped name 'get_access_token' (value not recorded)"
+    },
+    {
+      "evidence": "Documentation/architecture/codebase-graph.json:20",
+      "id": "secret-name:Documentation/architecture/codebase-graph.json:secret",
+      "item": "Documentation/architecture/codebase-graph.json mentions secret-shaped name 'secret' (value not recorded)"
+    },
+    {
+      "evidence": "Documentation/architecture/codebase-graph.json:20",
+      "id": "secret-name:Documentation/architecture/codebase-graph.json:token",
+      "item": "Documentation/architecture/codebase-graph.json mentions secret-shaped name 'token' (value not recorded)"
+    },
+    {
       "evidence": "README.md:149",
       "id": "secret-name:README.md:get_access_token",
       "item": "README.md mentions secret-shaped name 'get_access_token' (value not recorded)"
@@ -39,9 +77,79 @@
       "evidence": "README.md:149",
       "id": "secret-name:README.md:token",
       "item": "README.md mentions secret-shaped name 'token' (value not recorded)"
+    },
+    {
+      "evidence": "generator/diagnostics.py:4",
+      "id": "secret-name:generator/diagnostics.py:secret",
+      "item": "generator/diagnostics.py mentions secret-shaped name 'secret' (value not recorded)"
+    },
+    {
+      "evidence": "generator/extractors.py:36",
+      "id": "secret-name:generator/extractors.py:sh_token_re",
+      "item": "generator/extractors.py mentions secret-shaped name 'SH_TOKEN_RE' (value not recorded)"
+    },
+    {
+      "evidence": "generator/extractors.py:67",
+      "id": "secret-name:generator/extractors.py:token",
+      "item": "generator/extractors.py mentions secret-shaped name 'token' (value not recorded)"
+    },
+    {
+      "evidence": "generator/manifest.py:11",
+      "id": "secret-name:generator/manifest.py:secret",
+      "item": "generator/manifest.py mentions secret-shaped name 'secret' (value not recorded)"
+    },
+    {
+      "evidence": "generator/project_graph.py:489",
+      "id": "secret-name:generator/project_graph.py:api_key",
+      "item": "generator/project_graph.py mentions secret-shaped name 'API_KEY' (value not recorded)"
+    },
+    {
+      "evidence": "generator/project_graph.py:487",
+      "id": "secret-name:generator/project_graph.py:license_salt",
+      "item": "generator/project_graph.py mentions secret-shaped name 'LICENSE_SALT' (value not recorded)"
+    },
+    {
+      "evidence": "generator/project_graph.py:85",
+      "id": "secret-name:generator/project_graph.py:salt",
+      "item": "generator/project_graph.py mentions secret-shaped name 'SALT' (value not recorded)"
+    },
+    {
+      "evidence": "generator/project_graph.py:75",
+      "id": "secret-name:generator/project_graph.py:secret_basenames",
+      "item": "generator/project_graph.py mentions secret-shaped name 'SECRET_BASENAMES' (value not recorded)"
+    },
+    {
+      "evidence": "generator/project_graph.py:77",
+      "id": "secret-name:generator/project_graph.py:secret_globs",
+      "item": "generator/project_graph.py mentions secret-shaped name 'SECRET_GLOBS' (value not recorded)"
+    },
+    {
+      "evidence": "generator/project_graph.py:91",
+      "id": "secret-name:generator/project_graph.py:secret_single",
+      "item": "generator/project_graph.py mentions secret-shaped name 'SECRET_SINGLE' (value not recorded)"
+    },
+    {
+      "evidence": "generator/project_graph.py:88",
+      "id": "secret-name:generator/project_graph.py:secret_substrs",
+      "item": "generator/project_graph.py mentions secret-shaped name 'SECRET_SUBSTRS' (value not recorded)"
+    },
+    {
+      "evidence": "generator/project_graph.py:87",
+      "id": "secret-name:generator/project_graph.py:secret_token_re",
+      "item": "generator/project_graph.py mentions secret-shaped name 'SECRET_TOKEN_RE' (value not recorded)"
+    },
+    {
+      "evidence": "graph.config.json:6",
+      "id": "secret-name:graph.config.json:secret",
+      "item": "graph.config.json mentions secret-shaped name 'secret' (value not recorded)"
+    },
+    {
+      "evidence": "graph.config.json:12",
+      "id": "secret-name:graph.config.json:secrets_policy",
+      "item": "graph.config.json mentions secret-shaped name 'secrets_policy' (value not recorded)"
     }
   ],
-  "generated_at": "2026-11-18T21:56:12Z",
+  "generated_at": "2026-11-18T22:26:59Z",
   "nodes": [
     {
       "attrs": {
@@ -50,6 +158,42 @@
       },
       "id": "config:.cache-docs/openapi.yaml",
       "source": ".cache-docs/openapi.yaml",
+      "type": "config"
+    },
+    {
+      "attrs": {
+        "lines": 129,
+        "path": "Documentation/architecture/codebase-graph.json"
+      },
+      "id": "config:Documentation/architecture/codebase-graph.json",
+      "source": "Documentation/architecture/codebase-graph.json",
+      "type": "config"
+    },
+    {
+      "attrs": {
+        "lines": 2,
+        "path": "graph-template-VERSION"
+      },
+      "id": "config:graph-template-VERSION",
+      "source": "graph-template-VERSION",
+      "type": "config"
+    },
+    {
+      "attrs": {
+        "lines": 20,
+        "path": "graph.config.json"
+      },
+      "id": "config:graph.config.json",
+      "source": "graph.config.json",
+      "type": "config"
+    },
+    {
+      "attrs": {
+        "lines": 41,
+        "path": "manifest.schema.json"
+      },
+      "id": "config:manifest.schema.json",
+      "source": "manifest.schema.json",
       "type": "config"
     },
     {
@@ -96,13 +240,53 @@
       "id": "script:atomberg_send_command.py",
       "source": "atomberg_send_command.py",
       "type": "script"
+    },
+    {
+      "attrs": {
+        "lines": 74,
+        "path": "generator/diagnostics.py"
+      },
+      "id": "script:generator/diagnostics.py",
+      "source": "generator/diagnostics.py",
+      "type": "script"
+    },
+    {
+      "attrs": {
+        "lines": 426,
+        "path": "generator/extractors.py"
+      },
+      "id": "script:generator/extractors.py",
+      "source": "generator/extractors.py",
+      "type": "script"
+    },
+    {
+      "attrs": {
+        "lines": 193,
+        "path": "generator/manifest.py"
+      },
+      "id": "script:generator/manifest.py",
+      "source": "generator/manifest.py",
+      "type": "script"
+    },
+    {
+      "attrs": {
+        "lines": 724,
+        "path": "generator/project_graph.py"
+      },
+      "id": "script:generator/project_graph.py",
+      "source": "generator/project_graph.py",
+      "type": "script"
     }
   ],
-  "source_commit": "a33a3188c752fd001543ff06254c06b795902c37",
+  "source_commit": "d28d659a322b91aac9f804e12516587d59459ede",
   "sources": [
     {
       "path": ".cache-docs/openapi.yaml",
       "sha256": "95f2c1725bb8f58645a71cd56dd373e9bfa13f1d9d07040d7d52fdd71e24c027"
+    },
+    {
+      "path": "Documentation/architecture/codebase-graph.json",
+      "sha256": "7c3901f64cf2292de8bd0b06bc1a4f87235818f75e77e82ac8a75048506b1a21"
     },
     {
       "path": "README.md",
@@ -123,6 +307,34 @@
     {
       "path": "atomberg_send_command.py",
       "sha256": "017443df505238a6db5e249cbcc839cea28ff893292e5f302963631b8b54647e"
+    },
+    {
+      "path": "generator/diagnostics.py",
+      "sha256": "b9cbc975c913af98de2f03839e47589d4bbcbde310beddc600f5bbf4b3578665"
+    },
+    {
+      "path": "generator/extractors.py",
+      "sha256": "8e214e66aa23c043994b394f700d138502d6038bd2d6ff9a2e79b446e118b3fa"
+    },
+    {
+      "path": "generator/manifest.py",
+      "sha256": "a88088bd2d52a21b4ce484e6816778ce8238a5d4cd31350903f84a274ff1d772"
+    },
+    {
+      "path": "generator/project_graph.py",
+      "sha256": "9ed2745480bf96220bddbe4fe96e31897bf15d8aef6d25ef663202ab990eeac4"
+    },
+    {
+      "path": "graph-template-VERSION",
+      "sha256": "e9dd8507f4bf0c6f42458e41aea833ad0bd3f6127272335eee9bf4d58541ed67"
+    },
+    {
+      "path": "graph.config.json",
+      "sha256": "52f91b55c893f889c475c909f525c40e5f09ef1a4deea5022069d52bdfafff49"
+    },
+    {
+      "path": "manifest.schema.json",
+      "sha256": "903287c40311bb6c5060f258eb71a6c7981b1e484614611f1177690e847b3c98"
     }
   ]
 }
