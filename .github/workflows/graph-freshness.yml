@@ -1,0 +1,147 @@
+# Graph-freshness gate: FAILS red on stale, PASSES green on fresh.
+#
+# Fully read-only: `permissions` grants only `contents: read` (zero write
+# grants). Every step reads the tree or rebuilds into /tmp; nothing commits,
+# pushes, regenerates into the tree, or overwrites. Steps mirror
+# .github/tests/test-graph-freshness.sh (same four checks); the last step
+# runs that self-test.
+#
+# Normalization note (rebuild + fingerprint): the generator ingests its own
+# output file, so the committed graph lists itself under sources[] with its
+# at-build-time sha, plus a self node and self-derived secret-name gaps.
+# That self-reference can never byte-match across rebuilds, so the compare
+# drops volatile keys (generated_at, source_commit) and every entry derived
+# from the graph file itself. Everything describing real sources is still
+# byte-compared. The proper fix belongs in the template (exclude the output
+# path from collect(), mirroring the manifest exclusion); this normalization
+# stays valid after such a fix (there will simply be nothing to drop).
+name: graph-freshness
+
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: '0 6 * * 1' # weekly, per Documentation/graph-refresh.md
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  graph-freshness:
+    runs-on: ubuntu-latest
+    env:
+      CHECK_ROOT: ${{ github.workspace }}
+      GRAPH_REL: Documentation/architecture/codebase-graph.json
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Required artifacts present
+        run: |
+          set -euo pipefail
+          missing=0
+          for f in "$GRAPH_REL" graph.config.json manifest.schema.json \
+                   graph-template-VERSION generator/project_graph.py; do
+            if [ ! -f "$CHECK_ROOT/$f" ]; then echo "MISSING: $f"; missing=1; fi
+          done
+          [ "$missing" -eq 0 ]
+          echo "artifacts present: FRESHNESS_ARTIFACTS_OK"
+
+      - name: Schema check of committed graph
+        run: |
+          set -euo pipefail
+          python3 - "$CHECK_ROOT" <<'EOF'
+          import json, sys
+          root = sys.argv[1]
+          doc = json.load(open(root + '/Documentation/architecture/codebase-graph.json'))
+          want = ["nodes", "edges", "sources", "gaps", "drift",
+                  "generated_at", "source_commit"]
+          assert sorted(doc.keys()) == sorted(want), \
+              "top-level keys: %s" % sorted(doc.keys())
+          for n in doc["nodes"]:
+              assert set(("id", "type", "source", "attrs")) <= set(n), \
+                  "node keys: %s" % sorted(n.keys())
+          for e in doc["edges"]:
+              assert set(("src", "dst", "rel", "evidence")) <= set(e), \
+                  "edge keys: %s" % sorted(e.keys())
+          print("schema OK (%d nodes, %d edges, %d sources): FRESHNESS_SCHEMA_OK"
+                % (len(doc["nodes"]), len(doc["edges"]), len(doc["sources"])))
+          EOF
+
+      - name: Deterministic rebuild to /tmp and byte-compare
+        run: |
+          set -euo pipefail
+          PROJECT="$(python3 -c "import json;print(json.load(open('$CHECK_ROOT/graph.config.json')).get('project',''))")"
+          python3 "$CHECK_ROOT/generator/project_graph.py" build \
+            --root "$CHECK_ROOT" --project "$PROJECT" \
+            --config "$CHECK_ROOT/graph.config.json" \
+            --out /tmp/fresh-graph.json
+          GRAPH_REL="$GRAPH_REL" python3 - \
+            "$CHECK_ROOT/$GRAPH_REL" /tmp/fresh-graph.json <<'EOF'
+          import json, os, sys
+          committed = json.load(open(sys.argv[1]))
+          fresh = json.load(open(sys.argv[2]))
+          g = os.environ["GRAPH_REL"]
+          def norm(d):
+              d = dict(d); d["generated_at"] = "T"; d["source_commit"] = "C"
+              d["nodes"] = [n for n in d["nodes"]
+                            if n.get("source") != g
+                            and n.get("attrs", {}).get("path") != g]
+              d["sources"] = [s for s in d["sources"] if s["path"] != g]
+              d["gaps"] = [x for x in d["gaps"]
+                           if not x.get("evidence", "").startswith(g + ":")]
+              return json.dumps(d, sort_keys=True)
+          if norm(committed) != norm(fresh):
+              print("rebuild differs: committed (%d nodes, %d edges, %d sources)"
+                    " vs fresh (%d nodes, %d edges, %d sources)"
+                    % (len(committed.get("nodes", [])), len(committed.get("edges", [])),
+                       len(committed.get("sources", [])),
+                       len(fresh.get("nodes", [])), len(fresh.get("edges", [])),
+                       len(fresh.get("sources", []))))
+              sys.exit(1)
+          print("rebuild identical (volatile keys + self-entries normalized): FRESHNESS_REBUILD_OK")
+          EOF
+
+      - name: Committed-graph freshness vs sources fingerprint
+        run: |
+          set -euo pipefail
+          python3 - "$CHECK_ROOT" <<'EOF'
+          import hashlib, json, sys
+          root = sys.argv[1]
+          graph_rel = 'Documentation/architecture/codebase-graph.json'
+          doc = json.load(open(root + '/' + graph_rel))
+          bad = []
+          checked = 0
+          for s in doc.get("sources", []):
+              if s["path"] == graph_rel:
+                  continue # self-entry cannot fingerprint itself; covered by the rebuild step
+              checked += 1
+              try:
+                  h = hashlib.sha256(open(root + "/" + s["path"], "rb").read()).hexdigest()
+              except OSError:
+                  bad.append("%s MISSING" % s["path"]); continue
+              if h != s.get("sha256"):
+                  bad.append("%s CHANGED" % s["path"])
+          if bad:
+              print("stale fingerprint (%d):" % len(bad))
+              print("\n".join(bad[:20]))
+              sys.exit(1)
+          print("fingerprint OK (%d sources match, graph self-entry excluded): FRESHNESS_FINGERPRINT_OK"
+                % checked)
+          EOF
+
+      - name: Generator selftest
+        run: |
+          set -euo pipefail
+          python3 "$CHECK_ROOT/generator/project_graph.py" --selftest
+
+      - name: Workflow self-test
+        run: |
+          set -euo pipefail
+          bash "$CHECK_ROOT/.github/tests/test-graph-freshness.sh"
