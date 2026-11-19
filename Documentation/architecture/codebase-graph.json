@@ -2,6 +2,24 @@
   "drift": [],
   "edges": [
     {
+      "dst": "script:generator/project_graph.py",
+      "evidence": ".github/tests/test-graph-freshness.sh:175",
+      "rel": "runs",
+      "src": "script:.github/tests/test-graph-freshness.sh"
+    },
+    {
+      "dst": "script:generator/project_graph.py",
+      "evidence": ".github/tests/test-graph-freshness.sh:29",
+      "rel": "runs",
+      "src": "script:.github/tests/test-graph-freshness.sh"
+    },
+    {
+      "dst": "script:generator/project_graph.py",
+      "evidence": ".github/tests/test-graph-freshness.sh:71",
+      "rel": "runs",
+      "src": "script:.github/tests/test-graph-freshness.sh"
+    },
+    {
       "dst": "script:atomberg_local_discovery.py",
       "evidence": "atomberg_listen_state.py:7",
       "rel": "requires",
@@ -30,6 +48,36 @@
       "evidence": "generator/project_graph.py:32",
       "rel": "requires",
       "src": "script:generator/project_graph.py"
+    },
+    {
+      "dst": "script:.github/tests/test-graph-freshness.sh",
+      "evidence": ".github/workflows/graph-freshness.yml:147",
+      "rel": "runs",
+      "src": "workflow:.github/workflows/graph-freshness.yml"
+    },
+    {
+      "dst": "script:.github/tests/test-graph-freshness.sh",
+      "evidence": ".github/workflows/graph-freshness.yml:6",
+      "rel": "runs",
+      "src": "workflow:.github/workflows/graph-freshness.yml"
+    },
+    {
+      "dst": "script:generator/project_graph.py",
+      "evidence": ".github/workflows/graph-freshness.yml:142",
+      "rel": "runs",
+      "src": "workflow:.github/workflows/graph-freshness.yml"
+    },
+    {
+      "dst": "script:generator/project_graph.py",
+      "evidence": ".github/workflows/graph-freshness.yml:50",
+      "rel": "runs",
+      "src": "workflow:.github/workflows/graph-freshness.yml"
+    },
+    {
+      "dst": "script:generator/project_graph.py",
+      "evidence": ".github/workflows/graph-freshness.yml:81",
+      "rel": "runs",
+      "src": "workflow:.github/workflows/graph-freshness.yml"
     }
   ],
   "gaps": [
@@ -49,24 +97,54 @@
       "item": ".cache-docs/openapi.yaml mentions secret-shaped name 'token' (value not recorded)"
     },
     {
-      "evidence": "Documentation/architecture/codebase-graph.json:20",
-      "id": "secret-name:Documentation/architecture/codebase-graph.json:access_token",
-      "item": "Documentation/architecture/codebase-graph.json mentions secret-shaped name 'access_token' (value not recorded)"
+      "evidence": ".github/tests/test-graph-freshness.sh:61",
+      "id": "secret-name:.github/tests/test-graph-freshness.sh:secret",
+      "item": ".github/tests/test-graph-freshness.sh mentions secret-shaped name 'secret' (value not recorded)"
     },
     {
-      "evidence": "Documentation/architecture/codebase-graph.json:25",
-      "id": "secret-name:Documentation/architecture/codebase-graph.json:get_access_token",
-      "item": "Documentation/architecture/codebase-graph.json mentions secret-shaped name 'get_access_token' (value not recorded)"
+      "evidence": ".github/workflows/graph-freshness.yml:11",
+      "id": "secret-name:.github/workflows/graph-freshness.yml:secret",
+      "item": ".github/workflows/graph-freshness.yml mentions secret-shaped name 'secret' (value not recorded)"
     },
     {
-      "evidence": "Documentation/architecture/codebase-graph.json:20",
-      "id": "secret-name:Documentation/architecture/codebase-graph.json:secret",
-      "item": "Documentation/architecture/codebase-graph.json mentions secret-shaped name 'secret' (value not recorded)"
+      "evidence": "Documentation/architecture/codebase-graph.json:104",
+      "id": "secret-name:Documentation/architecture/codebase-graph.json:api_key",
+      "item": "Documentation/architecture/codebase-graph.json mentions secret-shaped name 'API_KEY' (value not recorded)"
     },
     {
-      "evidence": "Documentation/architecture/codebase-graph.json:20",
-      "id": "secret-name:Documentation/architecture/codebase-graph.json:token",
-      "item": "Documentation/architecture/codebase-graph.json mentions secret-shaped name 'token' (value not recorded)"
+      "evidence": "Documentation/architecture/codebase-graph.json:109",
+      "id": "secret-name:Documentation/architecture/codebase-graph.json:license_salt",
+      "item": "Documentation/architecture/codebase-graph.json mentions secret-shaped name 'LICENSE_SALT' (value not recorded)"
+    },
+    {
+      "evidence": "Documentation/architecture/codebase-graph.json:109",
+      "id": "secret-name:Documentation/architecture/codebase-graph.json:salt",
+      "item": "Documentation/architecture/codebase-graph.json mentions secret-shaped name 'SALT' (value not recorded)"
+    },
+    {
+      "evidence": "Documentation/architecture/codebase-graph.json:119",
+      "id": "secret-name:Documentation/architecture/codebase-graph.json:secret_basenames",
+      "item": "Documentation/architecture/codebase-graph.json mentions secret-shaped name 'SECRET_BASENAMES' (value not recorded)"
+    },
+    {
+      "evidence": "Documentation/architecture/codebase-graph.json:124",
+      "id": "secret-name:Documentation/architecture/codebase-graph.json:secret_globs",
+      "item": "Documentation/architecture/codebase-graph.json mentions secret-shaped name 'SECRET_GLOBS' (value not recorded)"
+    },
+    {
+      "evidence": "Documentation/architecture/codebase-graph.json:129",
+      "id": "secret-name:Documentation/architecture/codebase-graph.json:secret_single",
+      "item": "Documentation/architecture/codebase-graph.json mentions secret-shaped name 'SECRET_SINGLE' (value not recorded)"
+    },
+    {
+      "evidence": "Documentation/architecture/codebase-graph.json:134",
+      "id": "secret-name:Documentation/architecture/codebase-graph.json:secret_substrs",
+      "item": "Documentation/architecture/codebase-graph.json mentions secret-shaped name 'SECRET_SUBSTRS' (value not recorded)"
+    },
+    {
+      "evidence": "Documentation/architecture/codebase-graph.json:139",
+      "id": "secret-name:Documentation/architecture/codebase-graph.json:secret_token_re",
+      "item": "Documentation/architecture/codebase-graph.json mentions secret-shaped name 'SECRET_TOKEN_RE' (value not recorded)"
     },
     {
       "evidence": "README.md:149",
@@ -149,7 +227,7 @@
       "item": "graph.config.json mentions secret-shaped name 'secrets_policy' (value not recorded)"
     }
   ],
-  "generated_at": "2026-11-18T22:26:59Z",
+  "generated_at": "2026-11-19T05:39:35Z",
   "nodes": [
     {
       "attrs": {
@@ -162,7 +240,7 @@
     },
     {
       "attrs": {
-        "lines": 129,
+        "lines": 341,
         "path": "Documentation/architecture/codebase-graph.json"
       },
       "id": "config:Documentation/architecture/codebase-graph.json",
@@ -204,6 +282,15 @@
       "id": "doc:README.md",
       "source": "README.md",
       "type": "doc"
+    },
+    {
+      "attrs": {
+        "lines": 226,
+        "path": ".github/tests/test-graph-freshness.sh"
+      },
+      "id": "script:.github/tests/test-graph-freshness.sh",
+      "source": ".github/tests/test-graph-freshness.sh",
+      "type": "script"
     },
     {
       "attrs": {
@@ -276,17 +363,34 @@
       "id": "script:generator/project_graph.py",
       "source": "generator/project_graph.py",
       "type": "script"
+    },
+    {
+      "attrs": {
+        "lines": 148,
+        "path": ".github/workflows/graph-freshness.yml"
+      },
+      "id": "workflow:.github/workflows/graph-freshness.yml",
+      "source": ".github/workflows/graph-freshness.yml",
+      "type": "workflow"
     }
   ],
-  "source_commit": "d28d659a322b91aac9f804e12516587d59459ede",
+  "source_commit": "a5b073b45051ea90e12ea9f16b0752d82cef41c6",
   "sources": [
     {
       "path": ".cache-docs/openapi.yaml",
       "sha256": "95f2c1725bb8f58645a71cd56dd373e9bfa13f1d9d07040d7d52fdd71e24c027"
     },
     {
+      "path": ".github/tests/test-graph-freshness.sh",
+      "sha256": "b5a0393fa8b10e87da22a524d44ebd3448041ce863acd414eb80afed22fbe0b6"
+    },
+    {
+      "path": ".github/workflows/graph-freshness.yml",
+      "sha256": "fa1347e61bd5d690066003788ab7f2db21a3a418f2bd1c2138517e172f868e98"
+    },
+    {
       "path": "Documentation/architecture/codebase-graph.json",
-      "sha256": "7c3901f64cf2292de8bd0b06bc1a4f87235818f75e77e82ac8a75048506b1a21"
+      "sha256": "50ef0d87d59a634a97253b57cd6934ec11d15e1042a66ab70a3e1eb9b65b035d"
     },
     {
       "path": "README.md",
