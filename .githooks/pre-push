@@ -1,0 +1,188 @@
+#!/usr/bin/env bash
+# project-graph pre-push freshness gate (template hook; travels with the repo).
+#
+# Read-only: inspects the working tree, rebuilds the graph into /tmp and
+# byte-compares. NEVER regenerates, commits, or installs anything.
+# Installs only via sync: scripts/sync-project-template.sh copies this file
+# to .githooks/pre-push (mode 755) and scripts/sync.sh + scripts/bootstrap.sh
+# set core.hooksPath=.githooks. Legacy opt-in path remains:
+# templates/project-graph/install-pre-push-hook.sh installs to .git/hooks.
+#
+# Usage: pre-push [--repo DIR]   (git calls it with no flags; --repo is for
+#                tests and manual runs against a sandbox checkout)
+set -u
+
+REPO=""
+while [ $# -gt 0 ]; do
+  case "$1" in
+    --repo) REPO="${2:-}"; shift 2 ;;
+    --repo=*) REPO="${1#--repo=}"; shift ;;
+    *) shift ;;
+  esac
+done
+
+if [ -z "$REPO" ]; then
+  REPO="$(git rev-parse --show-toplevel 2>/dev/null || true)"
+fi
+if [ -z "$REPO" ] || [ ! -d "$REPO" ]; then
+  echo "project-graph pre-push: SKIP (not inside a git checkout)"
+  exit 0
+fi
+
+GEN="$REPO/generator/project_graph.py"
+CFG="$REPO/graph.config.json"
+GRAPH="$REPO/Documentation/architecture/codebase-graph.json"
+FIXED_OUT="Documentation/architecture/codebase-graph.json"
+REGEN="python3 generator/project_graph.py build --root . --project <name> --out $FIXED_OUT --config graph.config.json"
+
+abort() { # $1 = cause line
+  echo "BLOCKED (project-graph stale): $1"
+  echo "regen: $REGEN"
+  echo "The hook detects only: it never regenerates or commits. Rebuild and"
+  echo "commit the graph yourself, then push again."
+  exit 1
+}
+
+# 1. Required artifacts. No generator = template not installed here: skip.
+if [ ! -f "$GEN" ]; then
+  echo "project-graph pre-push: SKIP (no generator/project_graph.py; template not installed)"
+  exit 0
+fi
+if [ ! -f "$CFG" ]; then
+  abort "missing required artifact graph.config.json"
+fi
+if [ ! -f "$GRAPH" ]; then
+  abort "missing committed graph $FIXED_OUT"
+fi
+
+# 2. Schema check (mirrors the S1 freshness self-test: required keys +
+#    node/edge shapes; superset allowed per the additive schema rule).
+SCHEMA_OUT="$(python3 - "$GRAPH" <<'EOF' 2>&1
+import json, sys
+path = sys.argv[1]
+try:
+    doc = json.load(open(path, encoding="utf-8"))
+except Exception as exc:
+    print("SCHEMA: %s is not valid JSON (%s)" % (path, exc))
+    sys.exit(1)
+required = ["nodes", "edges", "sources", "gaps", "drift",
+            "generated_at", "source_commit"]
+missing = [k for k in required if k not in doc]
+if missing:
+    print("SCHEMA: missing keys: %s" % ", ".join(missing))
+    sys.exit(1)
+allowed = {"lua", "driver-xml", "manifest", "script", "workflow",
+           "doc", "page", "asset", "config", "vendor"}
+for n in doc.get("nodes", []):
+    if not ({"id", "type", "source", "attrs"} <= set(n)):
+        print("SCHEMA: node with bad keys: %s" % sorted(n.keys()))
+        sys.exit(1)
+    if n.get("type") not in allowed:
+        print("SCHEMA: node type not allowed: %s" % n.get("type"))
+        sys.exit(1)
+for e in doc.get("edges", []):
+    if set(("src", "dst", "rel", "evidence")) != set(e):
+        print("SCHEMA: edge with bad keys: %s" % sorted(e.keys()))
+        sys.exit(1)
+print("schema OK (%d nodes, %d edges, %d sources): FRESHNESS_SCHEMA_OK"
+      % (len(doc["nodes"]), len(doc["edges"]), len(doc["sources"])))
+EOF
+)"
+if [ $? -ne 0 ]; then
+  abort "$SCHEMA_OUT"
+fi
+
+# 3. Sources fingerprint (sha256 of every recorded source; the graph's own
+#    output path is a self-entry and is dropped, per the self-ingest note
+#    in Documentation/graph-refresh.md).
+FP_OUT="$(python3 - "$REPO" "$GRAPH" "$FIXED_OUT" <<'EOF' 2>&1
+import hashlib, json, os, sys
+root, graph_path, fixed_out = sys.argv[1], sys.argv[2], sys.argv[3]
+doc = json.load(open(graph_path, encoding="utf-8"))
+bad = []
+for s in doc.get("sources", []):
+    if s.get("path") == fixed_out:
+        continue
+    p = os.path.join(root, s["path"])
+    try:
+        h = hashlib.sha256(open(p, "rb").read()).hexdigest()
+    except OSError:
+        bad.append("%s MISSING" % s["path"])
+        continue
+    if h != s.get("sha256"):
+        bad.append("%s CHANGED" % s["path"])
+if bad:
+    print("FINGERPRINT: %d stale source(s): %s"
+          % (len(bad), ", ".join(bad[:10])))
+    sys.exit(1)
+print("fingerprint OK: FRESHNESS_FINGERPRINT_OK")
+EOF
+)"
+if [ $? -ne 0 ]; then
+  abort "$FP_OUT"
+fi
+
+# 4. Deterministic rebuild to /tmp + byte-compare (volatile keys normalized,
+#    self-entries dropped). Catches new/deleted files the fingerprint
+#    cannot see (they have no recorded entry yet).
+TMP="$(mktemp -d)"
+trap 'rm -rf "$TMP"' EXIT
+if ! PYTHONDONTWRITEBYTECODE=1 python3 "$GEN" build --root "$REPO" \
+     --out "$TMP/rebuilt.json" --config "$CFG" >/dev/null 2>&1; then
+  abort "generator rebuild failed (see generator output; config or sources unreadable)"
+fi
+REBUILD_OUT="$(python3 - "$GRAPH" "$TMP/rebuilt.json" "$FIXED_OUT" <<'EOF' 2>&1
+import json, sys
+committed_path, fresh_path, fixed_out = sys.argv[1], sys.argv[2], sys.argv[3]
+def norm(path):
+    doc = json.load(open(path, encoding="utf-8"))
+    doc["generated_at"] = "T"
+    doc["source_commit"] = "C"
+    # Self-ingest: the generator scans its own output file, so a rebuild
+    # run against a tree that already contains the committed graph carries
+    # one extra node/edges/gaps/sources for that file. Drop every entry
+    # derived from the output path before comparing (volatile keys +
+    # self-entries dropped, per Documentation/graph-refresh.md).
+    self_ids = {n["id"] for n in doc.get("nodes", [])
+                if n["id"].partition(":")[2] == fixed_out}
+    doc["nodes"] = sorted(
+        (n for n in doc.get("nodes", []) if n["id"] not in self_ids),
+        key=lambda n: n["id"])
+    doc["edges"] = sorted(
+        (e for e in doc.get("edges", [])
+         if e.get("src") not in self_ids and e.get("dst") not in self_ids),
+        key=lambda e: (e.get("src"), e.get("dst"), e.get("rel")))
+    doc["gaps"] = sorted(
+        (g for g in doc.get("gaps", [])
+         if fixed_out not in g.get("item", "")
+         and fixed_out not in g.get("evidence", "")),
+        key=lambda g: g.get("id"))
+    doc["sources"] = sorted(
+        (s for s in doc.get("sources", []) if s.get("path") != fixed_out),
+        key=lambda s: s["path"])
+    return doc
+old, new = norm(committed_path), norm(fresh_path)
+if json.dumps(old, sort_keys=True) == json.dumps(new, sort_keys=True):
+    print("rebuild identical (volatile keys normalized, self-entries dropped): FRESHNESS_REBUILD_OK")
+    sys.exit(0)
+old_paths = {s["path"] for s in old.get("sources", [])}
+new_paths = {s["path"] for s in new.get("sources", [])}
+notes = []
+for p in sorted(new_paths - old_paths):
+    notes.append("new file not in committed graph: %s" % p)
+for p in sorted(old_paths - new_paths):
+    notes.append("file in committed graph now missing: %s" % p)
+if not notes:
+    notes.append("committed graph has %d nodes/%d edges, fresh rebuild has %d nodes/%d edges"
+                 % (len(old.get("nodes", [])), len(old.get("edges", [])),
+                    len(new.get("nodes", [])), len(new.get("edges", []))))
+print("REBUILD: %s" % "; ".join(notes[:10]))
+sys.exit(1)
+EOF
+)"
+if [ $? -ne 0 ]; then
+  abort "$REBUILD_OUT"
+fi
+
+echo "project-graph freshness OK ($GRAPH matches sources)"
+exit 0

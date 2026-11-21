@@ -227,7 +227,7 @@
       "item": "graph.config.json mentions secret-shaped name 'secrets_policy' (value not recorded)"
     }
   ],
-  "generated_at": "2026-11-21T10:47:36Z",
+  "generated_at": "2026-11-21T17:45:51Z",
   "nodes": [
     {
       "attrs": {
@@ -240,7 +240,16 @@
     },
     {
       "attrs": {
-        "lines": 445,
+        "lines": 189,
+        "path": ".githooks/pre-push"
+      },
+      "id": "config:.githooks/pre-push",
+      "source": ".githooks/pre-push",
+      "type": "config"
+    },
+    {
+      "attrs": {
+        "lines": 458,
         "path": "Documentation/architecture/codebase-graph.json"
       },
       "id": "config:Documentation/architecture/codebase-graph.json",
@@ -267,7 +276,7 @@
     },
     {
       "attrs": {
-        "lines": 41,
+        "lines": 52,
         "path": "manifest.schema.json"
       },
       "id": "config:manifest.schema.json",
@@ -383,11 +392,15 @@
       "type": "workflow"
     }
   ],
-  "source_commit": "4f6ca0a68de797ca8ac6fcbe93ce7fac72e8cf0a",
+  "source_commit": "da63954a848b51d4bfb831c5a440614503b7350b",
   "sources": [
     {
       "path": ".cache-docs/openapi.yaml",
       "sha256": "95f2c1725bb8f58645a71cd56dd373e9bfa13f1d9d07040d7d52fdd71e24c027"
+    },
+    {
+      "path": ".githooks/pre-push",
+      "sha256": "ed37d80a903d049b088b17b313753b34007721041601c87dc3880af1485dbfd9"
     },
     {
       "path": ".github/tests/test-graph-freshness.sh",
@@ -403,7 +416,7 @@
     },
     {
       "path": "Documentation/architecture/codebase-graph.json",
-      "sha256": "c45d3288e16f81aa19e846b1bdf5d1e7b6a091e5c28dec73b6c93e10ccfd5728"
+      "sha256": "c05d2904ec61cd55795144a3c423fd89c0f15781f96097a41e0df877b41b195c"
     },
     {
       "path": "README.md",
@@ -451,7 +464,7 @@
     },
     {
       "path": "manifest.schema.json",
-      "sha256": "903287c40311bb6c5060f258eb71a6c7981b1e484614611f1177690e847b3c98"
+      "sha256": "e69de2b51144793bfeb7a4a07db3a7609103b35ac22121f15767642bf2a70c5e"
     }
   ]
 }
