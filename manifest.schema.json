@@ -1,15 +1,11 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "project-graph manifest",
-  "description": "Additive keys only: generators may add fields, never remove or rename existing ones.",
+  "title": "project-graph graph file",
+  "description": "Contract for the generated project graph file (Documentation/architecture/codebase-graph.json). Matches the template generator emitter (templates/project-graph/generator/project_graph.py SCHEMA_KEYS). Additive keys only: generators may add fields, never remove or rename existing ones. Stamps identifying the template build (project, template_version) live in the build manifest and graph.config.json, not in the graph file; the graph carries only generated_at/source_commit for freshness checks.",
   "type": "object",
   "additionalProperties": true,
-  "required": ["project", "template_version", "generated_at", "source_commit", "nodes", "edges"],
+  "required": ["nodes", "edges", "sources", "generated_at", "source_commit"],
   "properties": {
-    "project": { "type": "string" },
-    "template_version": { "type": "string" },
-    "generated_at": { "type": "string" },
-    "source_commit": { "type": "string" },
     "nodes": {
       "type": "array",
       "items": {
@@ -35,6 +31,21 @@
           "evidence": { "type": "string" }
         }
       }
-    }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["path", "sha256"],
+        "properties": {
+          "path": { "type": "string" },
+          "sha256": { "type": "string" }
+        }
+      }
+    },
+    "gaps": { "type": "array" },
+    "drift": { "type": "array" },
+    "generated_at": { "type": "string" },
+    "source_commit": { "type": "string" }
   }
 }
