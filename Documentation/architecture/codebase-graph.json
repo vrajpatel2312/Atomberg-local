@@ -2,6 +2,546 @@
   "drift": [],
   "edges": [
     {
+      "dst": "symbol:.cache-docs/openapi.yaml#components",
+      "evidence": ".cache-docs/openapi.yaml:1",
+      "rel": "defines",
+      "src": "config:.cache-docs/openapi.yaml"
+    },
+    {
+      "dst": "symbol:.cache-docs/openapi.yaml#components.securitySchemes",
+      "evidence": ".cache-docs/openapi.yaml:1",
+      "rel": "defines",
+      "src": "config:.cache-docs/openapi.yaml"
+    },
+    {
+      "dst": "symbol:.cache-docs/openapi.yaml#components.securitySchemes.apikeyAuth",
+      "evidence": ".cache-docs/openapi.yaml:1",
+      "rel": "defines",
+      "src": "config:.cache-docs/openapi.yaml"
+    },
+    {
+      "dst": "symbol:.cache-docs/openapi.yaml#info",
+      "evidence": ".cache-docs/openapi.yaml:1",
+      "rel": "defines",
+      "src": "config:.cache-docs/openapi.yaml"
+    },
+    {
+      "dst": "symbol:.cache-docs/openapi.yaml#info.description",
+      "evidence": ".cache-docs/openapi.yaml:1",
+      "rel": "defines",
+      "src": "config:.cache-docs/openapi.yaml"
+    },
+    {
+      "dst": "symbol:.cache-docs/openapi.yaml#info.title",
+      "evidence": ".cache-docs/openapi.yaml:1",
+      "rel": "defines",
+      "src": "config:.cache-docs/openapi.yaml"
+    },
+    {
+      "dst": "symbol:.cache-docs/openapi.yaml#info.version",
+      "evidence": ".cache-docs/openapi.yaml:1",
+      "rel": "defines",
+      "src": "config:.cache-docs/openapi.yaml"
+    },
+    {
+      "dst": "symbol:.cache-docs/openapi.yaml#openapi",
+      "evidence": ".cache-docs/openapi.yaml:1",
+      "rel": "defines",
+      "src": "config:.cache-docs/openapi.yaml"
+    },
+    {
+      "dst": "symbol:.cache-docs/openapi.yaml#paths",
+      "evidence": ".cache-docs/openapi.yaml:1",
+      "rel": "defines",
+      "src": "config:.cache-docs/openapi.yaml"
+    },
+    {
+      "dst": "symbol:.cache-docs/openapi.yaml#paths.get",
+      "evidence": ".cache-docs/openapi.yaml:1",
+      "rel": "defines",
+      "src": "config:.cache-docs/openapi.yaml"
+    },
+    {
+      "dst": "symbol:.cache-docs/openapi.yaml#paths.get.description",
+      "evidence": ".cache-docs/openapi.yaml:1",
+      "rel": "defines",
+      "src": "config:.cache-docs/openapi.yaml"
+    },
+    {
+      "dst": "symbol:.cache-docs/openapi.yaml#paths.get.parameters",
+      "evidence": ".cache-docs/openapi.yaml:1",
+      "rel": "defines",
+      "src": "config:.cache-docs/openapi.yaml"
+    },
+    {
+      "dst": "symbol:.cache-docs/openapi.yaml#paths.get.responses",
+      "evidence": ".cache-docs/openapi.yaml:1",
+      "rel": "defines",
+      "src": "config:.cache-docs/openapi.yaml"
+    },
+    {
+      "dst": "symbol:.cache-docs/openapi.yaml#paths.get.security",
+      "evidence": ".cache-docs/openapi.yaml:1",
+      "rel": "defines",
+      "src": "config:.cache-docs/openapi.yaml"
+    },
+    {
+      "dst": "symbol:.cache-docs/openapi.yaml#paths.get.summary",
+      "evidence": ".cache-docs/openapi.yaml:1",
+      "rel": "defines",
+      "src": "config:.cache-docs/openapi.yaml"
+    },
+    {
+      "dst": "symbol:.cache-docs/openapi.yaml#paths.get.tags",
+      "evidence": ".cache-docs/openapi.yaml:1",
+      "rel": "defines",
+      "src": "config:.cache-docs/openapi.yaml"
+    },
+    {
+      "dst": "symbol:.cache-docs/openapi.yaml#paths.post",
+      "evidence": ".cache-docs/openapi.yaml:1",
+      "rel": "defines",
+      "src": "config:.cache-docs/openapi.yaml"
+    },
+    {
+      "dst": "symbol:.cache-docs/openapi.yaml#paths.post.description",
+      "evidence": ".cache-docs/openapi.yaml:1",
+      "rel": "defines",
+      "src": "config:.cache-docs/openapi.yaml"
+    },
+    {
+      "dst": "symbol:.cache-docs/openapi.yaml#paths.post.parameters",
+      "evidence": ".cache-docs/openapi.yaml:1",
+      "rel": "defines",
+      "src": "config:.cache-docs/openapi.yaml"
+    },
+    {
+      "dst": "symbol:.cache-docs/openapi.yaml#paths.post.requestBody",
+      "evidence": ".cache-docs/openapi.yaml:1",
+      "rel": "defines",
+      "src": "config:.cache-docs/openapi.yaml"
+    },
+    {
+      "dst": "symbol:.cache-docs/openapi.yaml#paths.post.responses",
+      "evidence": ".cache-docs/openapi.yaml:1",
+      "rel": "defines",
+      "src": "config:.cache-docs/openapi.yaml"
+    },
+    {
+      "dst": "symbol:.cache-docs/openapi.yaml#paths.post.security",
+      "evidence": ".cache-docs/openapi.yaml:1",
+      "rel": "defines",
+      "src": "config:.cache-docs/openapi.yaml"
+    },
+    {
+      "dst": "symbol:.cache-docs/openapi.yaml#paths.post.summary",
+      "evidence": ".cache-docs/openapi.yaml:1",
+      "rel": "defines",
+      "src": "config:.cache-docs/openapi.yaml"
+    },
+    {
+      "dst": "symbol:.cache-docs/openapi.yaml#paths.post.tags",
+      "evidence": ".cache-docs/openapi.yaml:1",
+      "rel": "defines",
+      "src": "config:.cache-docs/openapi.yaml"
+    },
+    {
+      "dst": "symbol:.cache-docs/openapi.yaml#servers",
+      "evidence": ".cache-docs/openapi.yaml:1",
+      "rel": "defines",
+      "src": "config:.cache-docs/openapi.yaml"
+    },
+    {
+      "dst": "symbol:.cache-docs/openapi.yaml#servers.url",
+      "evidence": ".cache-docs/openapi.yaml:1",
+      "rel": "defines",
+      "src": "config:.cache-docs/openapi.yaml"
+    },
+    {
+      "dst": "symbol:.cache-docs/openapi.yaml#tags",
+      "evidence": ".cache-docs/openapi.yaml:1",
+      "rel": "defines",
+      "src": "config:.cache-docs/openapi.yaml"
+    },
+    {
+      "dst": "symbol:.cache-docs/openapi.yaml#tags.name",
+      "evidence": ".cache-docs/openapi.yaml:1",
+      "rel": "defines",
+      "src": "config:.cache-docs/openapi.yaml"
+    },
+    {
+      "dst": "symbol:.cache-docs/openapi.yaml#tags.name.description",
+      "evidence": ".cache-docs/openapi.yaml:1",
+      "rel": "defines",
+      "src": "config:.cache-docs/openapi.yaml"
+    },
+    {
+      "dst": "symbol:graph.config.json#deterministic",
+      "evidence": "graph.config.json:1",
+      "rel": "defines",
+      "src": "config:graph.config.json"
+    },
+    {
+      "dst": "symbol:graph.config.json#excludes",
+      "evidence": "graph.config.json:1",
+      "rel": "defines",
+      "src": "config:graph.config.json"
+    },
+    {
+      "dst": "symbol:graph.config.json#output",
+      "evidence": "graph.config.json:1",
+      "rel": "defines",
+      "src": "config:graph.config.json"
+    },
+    {
+      "dst": "symbol:graph.config.json#project",
+      "evidence": "graph.config.json:1",
+      "rel": "defines",
+      "src": "config:graph.config.json"
+    },
+    {
+      "dst": "symbol:graph.config.json#secrets_policy",
+      "evidence": "graph.config.json:1",
+      "rel": "defines",
+      "src": "config:graph.config.json"
+    },
+    {
+      "dst": "symbol:graph.config.json#sources",
+      "evidence": "graph.config.json:1",
+      "rel": "defines",
+      "src": "config:graph.config.json"
+    },
+    {
+      "dst": "symbol:graph.config.json#version",
+      "evidence": "graph.config.json:1",
+      "rel": "defines",
+      "src": "config:graph.config.json"
+    },
+    {
+      "dst": "symbol:manifest.schema.json#$schema",
+      "evidence": "manifest.schema.json:1",
+      "rel": "defines",
+      "src": "config:manifest.schema.json"
+    },
+    {
+      "dst": "symbol:manifest.schema.json#additionalProperties",
+      "evidence": "manifest.schema.json:1",
+      "rel": "defines",
+      "src": "config:manifest.schema.json"
+    },
+    {
+      "dst": "symbol:manifest.schema.json#description",
+      "evidence": "manifest.schema.json:1",
+      "rel": "defines",
+      "src": "config:manifest.schema.json"
+    },
+    {
+      "dst": "symbol:manifest.schema.json#properties",
+      "evidence": "manifest.schema.json:1",
+      "rel": "defines",
+      "src": "config:manifest.schema.json"
+    },
+    {
+      "dst": "symbol:manifest.schema.json#properties.drift",
+      "evidence": "manifest.schema.json:1",
+      "rel": "defines",
+      "src": "config:manifest.schema.json"
+    },
+    {
+      "dst": "symbol:manifest.schema.json#properties.drift.type",
+      "evidence": "manifest.schema.json:1",
+      "rel": "defines",
+      "src": "config:manifest.schema.json"
+    },
+    {
+      "dst": "symbol:manifest.schema.json#properties.edges",
+      "evidence": "manifest.schema.json:1",
+      "rel": "defines",
+      "src": "config:manifest.schema.json"
+    },
+    {
+      "dst": "symbol:manifest.schema.json#properties.edges.items",
+      "evidence": "manifest.schema.json:1",
+      "rel": "defines",
+      "src": "config:manifest.schema.json"
+    },
+    {
+      "dst": "symbol:manifest.schema.json#properties.edges.type",
+      "evidence": "manifest.schema.json:1",
+      "rel": "defines",
+      "src": "config:manifest.schema.json"
+    },
+    {
+      "dst": "symbol:manifest.schema.json#properties.gaps",
+      "evidence": "manifest.schema.json:1",
+      "rel": "defines",
+      "src": "config:manifest.schema.json"
+    },
+    {
+      "dst": "symbol:manifest.schema.json#properties.gaps.type",
+      "evidence": "manifest.schema.json:1",
+      "rel": "defines",
+      "src": "config:manifest.schema.json"
+    },
+    {
+      "dst": "symbol:manifest.schema.json#properties.generated_at",
+      "evidence": "manifest.schema.json:1",
+      "rel": "defines",
+      "src": "config:manifest.schema.json"
+    },
+    {
+      "dst": "symbol:manifest.schema.json#properties.generated_at.type",
+      "evidence": "manifest.schema.json:1",
+      "rel": "defines",
+      "src": "config:manifest.schema.json"
+    },
+    {
+      "dst": "symbol:manifest.schema.json#properties.nodes",
+      "evidence": "manifest.schema.json:1",
+      "rel": "defines",
+      "src": "config:manifest.schema.json"
+    },
+    {
+      "dst": "symbol:manifest.schema.json#properties.nodes.items",
+      "evidence": "manifest.schema.json:1",
+      "rel": "defines",
+      "src": "config:manifest.schema.json"
+    },
+    {
+      "dst": "symbol:manifest.schema.json#properties.nodes.type",
+      "evidence": "manifest.schema.json:1",
+      "rel": "defines",
+      "src": "config:manifest.schema.json"
+    },
+    {
+      "dst": "symbol:manifest.schema.json#properties.source_commit",
+      "evidence": "manifest.schema.json:1",
+      "rel": "defines",
+      "src": "config:manifest.schema.json"
+    },
+    {
+      "dst": "symbol:manifest.schema.json#properties.source_commit.type",
+      "evidence": "manifest.schema.json:1",
+      "rel": "defines",
+      "src": "config:manifest.schema.json"
+    },
+    {
+      "dst": "symbol:manifest.schema.json#properties.sources",
+      "evidence": "manifest.schema.json:1",
+      "rel": "defines",
+      "src": "config:manifest.schema.json"
+    },
+    {
+      "dst": "symbol:manifest.schema.json#properties.sources.items",
+      "evidence": "manifest.schema.json:1",
+      "rel": "defines",
+      "src": "config:manifest.schema.json"
+    },
+    {
+      "dst": "symbol:manifest.schema.json#properties.sources.type",
+      "evidence": "manifest.schema.json:1",
+      "rel": "defines",
+      "src": "config:manifest.schema.json"
+    },
+    {
+      "dst": "symbol:manifest.schema.json#required",
+      "evidence": "manifest.schema.json:1",
+      "rel": "defines",
+      "src": "config:manifest.schema.json"
+    },
+    {
+      "dst": "symbol:manifest.schema.json#title",
+      "evidence": "manifest.schema.json:1",
+      "rel": "defines",
+      "src": "config:manifest.schema.json"
+    },
+    {
+      "dst": "symbol:manifest.schema.json#type",
+      "evidence": "manifest.schema.json:1",
+      "rel": "defines",
+      "src": "config:manifest.schema.json"
+    },
+    {
+      "dst": "symbol:AGENTS.md#AGENTS.md \u2014 atomberg-local",
+      "evidence": "AGENTS.md:1",
+      "rel": "defines",
+      "src": "doc:AGENTS.md"
+    },
+    {
+      "dst": "symbol:AGENTS.md#Build / package / test",
+      "evidence": "AGENTS.md:1",
+      "rel": "defines",
+      "src": "doc:AGENTS.md"
+    },
+    {
+      "dst": "symbol:AGENTS.md#Graph",
+      "evidence": "AGENTS.md:1",
+      "rel": "defines",
+      "src": "doc:AGENTS.md"
+    },
+    {
+      "dst": "symbol:AGENTS.md#Layout",
+      "evidence": "AGENTS.md:1",
+      "rel": "defines",
+      "src": "doc:AGENTS.md"
+    },
+    {
+      "dst": "symbol:AGENTS.md#Safety",
+      "evidence": "AGENTS.md:1",
+      "rel": "defines",
+      "src": "doc:AGENTS.md"
+    },
+    {
+      "dst": "symbol:AGENTS.md#What this is",
+      "evidence": "AGENTS.md:1",
+      "rel": "defines",
+      "src": "doc:AGENTS.md"
+    },
+    {
+      "dst": "symbol:README.md#Atomberg Fan (Local LAN + Cloud) Control Guide",
+      "evidence": "README.md:1",
+      "rel": "defines",
+      "src": "doc:README.md"
+    },
+    {
+      "dst": "symbol:README.md#Cloud API option (read state + send speed)",
+      "evidence": "README.md:1",
+      "rel": "defines",
+      "src": "doc:README.md"
+    },
+    {
+      "dst": "symbol:README.md#Cloud flow (high level)",
+      "evidence": "README.md:1",
+      "rel": "defines",
+      "src": "doc:README.md"
+    },
+    {
+      "dst": "symbol:README.md#How local state works",
+      "evidence": "README.md:1",
+      "rel": "defines",
+      "src": "doc:README.md"
+    },
+    {
+      "dst": "symbol:README.md#Identify a fan on the network (MAC \u2192 IP)",
+      "evidence": "README.md:1",
+      "rel": "defines",
+      "src": "doc:README.md"
+    },
+    {
+      "dst": "symbol:README.md#LED (light) OFF",
+      "evidence": "README.md:1",
+      "rel": "defines",
+      "src": "doc:README.md"
+    },
+    {
+      "dst": "symbol:README.md#Machine requirements",
+      "evidence": "README.md:1",
+      "rel": "defines",
+      "src": "doc:README.md"
+    },
+    {
+      "dst": "symbol:README.md#Multi-fan tip: always target by MAC (recommended)",
+      "evidence": "README.md:1",
+      "rel": "defines",
+      "src": "doc:README.md"
+    },
+    {
+      "dst": "symbol:README.md#Network requirements (local LAN mode)",
+      "evidence": "README.md:1",
+      "rel": "defines",
+      "src": "doc:README.md"
+    },
+    {
+      "dst": "symbol:README.md#Notes",
+      "evidence": "README.md:1",
+      "rel": "defines",
+      "src": "doc:README.md"
+    },
+    {
+      "dst": "symbol:README.md#Other common local commands",
+      "evidence": "README.md:1",
+      "rel": "defines",
+      "src": "doc:README.md"
+    },
+    {
+      "dst": "symbol:README.md#Output you care about",
+      "evidence": "README.md:1",
+      "rel": "defines",
+      "src": "doc:README.md"
+    },
+    {
+      "dst": "symbol:README.md#Power OFF (equivalent to \"speed 0\")",
+      "evidence": "README.md:1",
+      "rel": "defines",
+      "src": "doc:README.md"
+    },
+    {
+      "dst": "symbol:README.md#Power ON",
+      "evidence": "README.md:1",
+      "rel": "defines",
+      "src": "doc:README.md"
+    },
+    {
+      "dst": "symbol:README.md#Push commands locally (set speed / power / LED)",
+      "evidence": "README.md:1",
+      "rel": "defines",
+      "src": "doc:README.md"
+    },
+    {
+      "dst": "symbol:README.md#Read current state locally (UDP broadcast)",
+      "evidence": "README.md:1",
+      "rel": "defines",
+      "src": "doc:README.md"
+    },
+    {
+      "dst": "symbol:README.md#Reliable way: listen + \u201cpoke\u201d (re-send a command while listening)",
+      "evidence": "README.md:1",
+      "rel": "defines",
+      "src": "doc:README.md"
+    },
+    {
+      "dst": "symbol:README.md#Requirements",
+      "evidence": "README.md:1",
+      "rel": "defines",
+      "src": "doc:README.md"
+    },
+    {
+      "dst": "symbol:README.md#Speed delta (+1/-1/etc)",
+      "evidence": "README.md:1",
+      "rel": "defines",
+      "src": "doc:README.md"
+    },
+    {
+      "dst": "symbol:README.md#Step 1 \u2014 Listen for beacons",
+      "evidence": "README.md:1",
+      "rel": "defines",
+      "src": "doc:README.md"
+    },
+    {
+      "dst": "symbol:README.md#Step 2 \u2014 Send speed (1..6)",
+      "evidence": "README.md:1",
+      "rel": "defines",
+      "src": "doc:README.md"
+    },
+    {
+      "dst": "symbol:README.md#Step 3 \u2014 Listen for state updates",
+      "evidence": "README.md:1",
+      "rel": "defines",
+      "src": "doc:README.md"
+    },
+    {
+      "dst": "symbol:README.md#Supported speed range (important)",
+      "evidence": "README.md:1",
+      "rel": "defines",
+      "src": "doc:README.md"
+    },
+    {
+      "dst": "symbol:README.md#Troubleshooting",
+      "evidence": "README.md:1",
+      "rel": "defines",
+      "src": "doc:README.md"
+    },
+    {
       "dst": "script:generator/project_graph.py",
       "evidence": ".github/tests/test-graph-freshness.sh:175",
       "rel": "runs",
@@ -20,16 +560,400 @@
       "src": "script:.github/tests/test-graph-freshness.sh"
     },
     {
+      "dst": "symbol:.github/tests/test-graph-freshness.sh#bad",
+      "evidence": ".github/tests/test-graph-freshness.sh:1",
+      "rel": "defines",
+      "src": "script:.github/tests/test-graph-freshness.sh"
+    },
+    {
+      "dst": "symbol:.github/tests/test-graph-freshness.sh#check_artifacts",
+      "evidence": ".github/tests/test-graph-freshness.sh:1",
+      "rel": "defines",
+      "src": "script:.github/tests/test-graph-freshness.sh"
+    },
+    {
+      "dst": "symbol:.github/tests/test-graph-freshness.sh#check_fingerprint",
+      "evidence": ".github/tests/test-graph-freshness.sh:1",
+      "rel": "defines",
+      "src": "script:.github/tests/test-graph-freshness.sh"
+    },
+    {
+      "dst": "symbol:.github/tests/test-graph-freshness.sh#check_rebuild",
+      "evidence": ".github/tests/test-graph-freshness.sh:1",
+      "rel": "defines",
+      "src": "script:.github/tests/test-graph-freshness.sh"
+    },
+    {
+      "dst": "symbol:.github/tests/test-graph-freshness.sh#check_schema",
+      "evidence": ".github/tests/test-graph-freshness.sh:1",
+      "rel": "defines",
+      "src": "script:.github/tests/test-graph-freshness.sh"
+    },
+    {
+      "dst": "symbol:.github/tests/test-graph-freshness.sh#ok",
+      "evidence": ".github/tests/test-graph-freshness.sh:1",
+      "rel": "defines",
+      "src": "script:.github/tests/test-graph-freshness.sh"
+    },
+    {
+      "dst": "symbol:.github/tests/test-graph-freshness.sh#skip",
+      "evidence": ".github/tests/test-graph-freshness.sh:1",
+      "rel": "defines",
+      "src": "script:.github/tests/test-graph-freshness.sh"
+    },
+    {
+      "dst": "symbol:.github/tests/test-graph-freshness.sh#tracked_clean",
+      "evidence": ".github/tests/test-graph-freshness.sh:1",
+      "rel": "defines",
+      "src": "script:.github/tests/test-graph-freshness.sh"
+    },
+    {
+      "dst": "symbol:atomberg_listen_beacons.py#listen_for_beacons",
+      "evidence": "atomberg_listen_beacons.py:1",
+      "rel": "defines",
+      "src": "script:atomberg_listen_beacons.py"
+    },
+    {
+      "dst": "symbol:atomberg_listen_beacons.py#main",
+      "evidence": "atomberg_listen_beacons.py:1",
+      "rel": "defines",
+      "src": "script:atomberg_listen_beacons.py"
+    },
+    {
       "dst": "script:atomberg_local_discovery.py",
       "evidence": "atomberg_listen_state.py:7",
       "rel": "requires",
       "src": "script:atomberg_listen_state.py"
     },
     {
+      "dst": "symbol:atomberg_listen_state.py#DecodedState",
+      "evidence": "atomberg_listen_state.py:1",
+      "rel": "defines",
+      "src": "script:atomberg_listen_state.py"
+    },
+    {
+      "dst": "symbol:atomberg_listen_state.py#_parse_int_auto",
+      "evidence": "atomberg_listen_state.py:1",
+      "rel": "defines",
+      "src": "script:atomberg_listen_state.py"
+    },
+    {
+      "dst": "symbol:atomberg_listen_state.py#decode_state_value",
+      "evidence": "atomberg_listen_state.py:1",
+      "rel": "defines",
+      "src": "script:atomberg_listen_state.py"
+    },
+    {
+      "dst": "symbol:atomberg_listen_state.py#listen_state",
+      "evidence": "atomberg_listen_state.py:1",
+      "rel": "defines",
+      "src": "script:atomberg_listen_state.py"
+    },
+    {
+      "dst": "symbol:atomberg_listen_state.py#main",
+      "evidence": "atomberg_listen_state.py:1",
+      "rel": "defines",
+      "src": "script:atomberg_listen_state.py"
+    },
+    {
+      "dst": "symbol:atomberg_listen_state.py#try_decode_udp_payload",
+      "evidence": "atomberg_listen_state.py:1",
+      "rel": "defines",
+      "src": "script:atomberg_listen_state.py"
+    },
+    {
+      "dst": "symbol:atomberg_listen_state.py#try_decode_udp_payload.looks_like_hex",
+      "evidence": "atomberg_listen_state.py:1",
+      "rel": "defines",
+      "src": "script:atomberg_listen_state.py"
+    },
+    {
+      "dst": "symbol:atomberg_local_discovery.py#discover_ip_by_mac",
+      "evidence": "atomberg_local_discovery.py:1",
+      "rel": "defines",
+      "src": "script:atomberg_local_discovery.py"
+    },
+    {
+      "dst": "symbol:atomberg_local_discovery.py#normalize_mac",
+      "evidence": "atomberg_local_discovery.py:1",
+      "rel": "defines",
+      "src": "script:atomberg_local_discovery.py"
+    },
+    {
       "dst": "script:atomberg_local_discovery.py",
       "evidence": "atomberg_send_command.py:5",
       "rel": "requires",
       "src": "script:atomberg_send_command.py"
+    },
+    {
+      "dst": "symbol:atomberg_send_command.py#main",
+      "evidence": "atomberg_send_command.py:1",
+      "rel": "defines",
+      "src": "script:atomberg_send_command.py"
+    },
+    {
+      "dst": "symbol:generator/diagnostics.py#diff_graphs",
+      "evidence": "generator/diagnostics.py:1",
+      "rel": "defines",
+      "src": "script:generator/diagnostics.py"
+    },
+    {
+      "dst": "symbol:generator/diagnostics.py#diff_graphs.triple",
+      "evidence": "generator/diagnostics.py:1",
+      "rel": "defines",
+      "src": "script:generator/diagnostics.py"
+    },
+    {
+      "dst": "symbol:generator/diagnostics.py#gap_category",
+      "evidence": "generator/diagnostics.py:1",
+      "rel": "defines",
+      "src": "script:generator/diagnostics.py"
+    },
+    {
+      "dst": "symbol:generator/diagnostics.py#render",
+      "evidence": "generator/diagnostics.py:1",
+      "rel": "defines",
+      "src": "script:generator/diagnostics.py"
+    },
+    {
+      "dst": "symbol:generator/diagnostics.py#summarize_gaps",
+      "evidence": "generator/diagnostics.py:1",
+      "rel": "defines",
+      "src": "script:generator/diagnostics.py"
+    },
+    {
+      "dst": "symbol:generator/extractors.py#Ctx",
+      "evidence": "generator/extractors.py:1",
+      "rel": "defines",
+      "src": "script:generator/extractors.py"
+    },
+    {
+      "dst": "symbol:generator/extractors.py#Ctx.__init__",
+      "evidence": "generator/extractors.py:1",
+      "rel": "defines",
+      "src": "script:generator/extractors.py"
+    },
+    {
+      "dst": "symbol:generator/extractors.py#Ctx.add",
+      "evidence": "generator/extractors.py:1",
+      "rel": "defines",
+      "src": "script:generator/extractors.py"
+    },
+    {
+      "dst": "symbol:generator/extractors.py#dispatch_key",
+      "evidence": "generator/extractors.py:1",
+      "rel": "defines",
+      "src": "script:generator/extractors.py"
+    },
+    {
+      "dst": "symbol:generator/extractors.py#enabled_extractors",
+      "evidence": "generator/extractors.py:1",
+      "rel": "defines",
+      "src": "script:generator/extractors.py"
+    },
+    {
+      "dst": "symbol:generator/extractors.py#ex_asset",
+      "evidence": "generator/extractors.py:1",
+      "rel": "defines",
+      "src": "script:generator/extractors.py"
+    },
+    {
+      "dst": "symbol:generator/extractors.py#ex_doc",
+      "evidence": "generator/extractors.py:1",
+      "rel": "defines",
+      "src": "script:generator/extractors.py"
+    },
+    {
+      "dst": "symbol:generator/extractors.py#ex_driver_xml",
+      "evidence": "generator/extractors.py:1",
+      "rel": "defines",
+      "src": "script:generator/extractors.py"
+    },
+    {
+      "dst": "symbol:generator/extractors.py#ex_lua",
+      "evidence": "generator/extractors.py:1",
+      "rel": "defines",
+      "src": "script:generator/extractors.py"
+    },
+    {
+      "dst": "symbol:generator/extractors.py#ex_manifest",
+      "evidence": "generator/extractors.py:1",
+      "rel": "defines",
+      "src": "script:generator/extractors.py"
+    },
+    {
+      "dst": "symbol:generator/extractors.py#ex_page",
+      "evidence": "generator/extractors.py:1",
+      "rel": "defines",
+      "src": "script:generator/extractors.py"
+    },
+    {
+      "dst": "symbol:generator/extractors.py#ex_script_go",
+      "evidence": "generator/extractors.py:1",
+      "rel": "defines",
+      "src": "script:generator/extractors.py"
+    },
+    {
+      "dst": "symbol:generator/extractors.py#ex_script_py",
+      "evidence": "generator/extractors.py:1",
+      "rel": "defines",
+      "src": "script:generator/extractors.py"
+    },
+    {
+      "dst": "symbol:generator/extractors.py#ex_script_sh",
+      "evidence": "generator/extractors.py:1",
+      "rel": "defines",
+      "src": "script:generator/extractors.py"
+    },
+    {
+      "dst": "symbol:generator/extractors.py#ex_workflow",
+      "evidence": "generator/extractors.py:1",
+      "rel": "defines",
+      "src": "script:generator/extractors.py"
+    },
+    {
+      "dst": "symbol:generator/extractors.py#first_lineno",
+      "evidence": "generator/extractors.py:1",
+      "rel": "defines",
+      "src": "script:generator/extractors.py"
+    },
+    {
+      "dst": "symbol:generator/extractors.py#is_external",
+      "evidence": "generator/extractors.py:1",
+      "rel": "defines",
+      "src": "script:generator/extractors.py"
+    },
+    {
+      "dst": "symbol:generator/extractors.py#lang_for",
+      "evidence": "generator/extractors.py:1",
+      "rel": "defines",
+      "src": "script:generator/extractors.py"
+    },
+    {
+      "dst": "symbol:generator/extractors.py#lua_index",
+      "evidence": "generator/extractors.py:1",
+      "rel": "defines",
+      "src": "script:generator/extractors.py"
+    },
+    {
+      "dst": "symbol:generator/extractors.py#register",
+      "evidence": "generator/extractors.py:1",
+      "rel": "defines",
+      "src": "script:generator/extractors.py"
+    },
+    {
+      "dst": "symbol:generator/extractors.py#register.wrap",
+      "evidence": "generator/extractors.py:1",
+      "rel": "defines",
+      "src": "script:generator/extractors.py"
+    },
+    {
+      "dst": "symbol:generator/extractors.py#resolve",
+      "evidence": "generator/extractors.py:1",
+      "rel": "defines",
+      "src": "script:generator/extractors.py"
+    },
+    {
+      "dst": "symbol:generator/extractors.py#resolve_lua",
+      "evidence": "generator/extractors.py:1",
+      "rel": "defines",
+      "src": "script:generator/extractors.py"
+    },
+    {
+      "dst": "symbol:generator/extractors.py#resolve_lua.score",
+      "evidence": "generator/extractors.py:1",
+      "rel": "defines",
+      "src": "script:generator/extractors.py"
+    },
+    {
+      "dst": "symbol:generator/extractors.py#resolve_py",
+      "evidence": "generator/extractors.py:1",
+      "rel": "defines",
+      "src": "script:generator/extractors.py"
+    },
+    {
+      "dst": "symbol:generator/extractors.py#strip_qs",
+      "evidence": "generator/extractors.py:1",
+      "rel": "defines",
+      "src": "script:generator/extractors.py"
+    },
+    {
+      "dst": "symbol:generator/manifest.py#build_manifest",
+      "evidence": "generator/manifest.py:1",
+      "rel": "defines",
+      "src": "script:generator/manifest.py"
+    },
+    {
+      "dst": "symbol:generator/manifest.py#candidate_rels",
+      "evidence": "generator/manifest.py:1",
+      "rel": "defines",
+      "src": "script:generator/manifest.py"
+    },
+    {
+      "dst": "symbol:generator/manifest.py#changed_files",
+      "evidence": "generator/manifest.py:1",
+      "rel": "defines",
+      "src": "script:generator/manifest.py"
+    },
+    {
+      "dst": "symbol:generator/manifest.py#fingerprint",
+      "evidence": "generator/manifest.py:1",
+      "rel": "defines",
+      "src": "script:generator/manifest.py"
+    },
+    {
+      "dst": "symbol:generator/manifest.py#git_commit",
+      "evidence": "generator/manifest.py:1",
+      "rel": "defines",
+      "src": "script:generator/manifest.py"
+    },
+    {
+      "dst": "symbol:generator/manifest.py#load_manifest",
+      "evidence": "generator/manifest.py:1",
+      "rel": "defines",
+      "src": "script:generator/manifest.py"
+    },
+    {
+      "dst": "symbol:generator/manifest.py#needs_rebuild",
+      "evidence": "generator/manifest.py:1",
+      "rel": "defines",
+      "src": "script:generator/manifest.py"
+    },
+    {
+      "dst": "symbol:generator/manifest.py#rel_inside",
+      "evidence": "generator/manifest.py:1",
+      "rel": "defines",
+      "src": "script:generator/manifest.py"
+    },
+    {
+      "dst": "symbol:generator/manifest.py#save_manifest",
+      "evidence": "generator/manifest.py:1",
+      "rel": "defines",
+      "src": "script:generator/manifest.py"
+    },
+    {
+      "dst": "symbol:generator/manifest.py#sha256_bytes",
+      "evidence": "generator/manifest.py:1",
+      "rel": "defines",
+      "src": "script:generator/manifest.py"
+    },
+    {
+      "dst": "symbol:generator/manifest.py#sha256_file",
+      "evidence": "generator/manifest.py:1",
+      "rel": "defines",
+      "src": "script:generator/manifest.py"
+    },
+    {
+      "dst": "symbol:generator/manifest.py#tracked_files",
+      "evidence": "generator/manifest.py:1",
+      "rel": "defines",
+      "src": "script:generator/manifest.py"
+    },
+    {
+      "dst": "symbol:generator/manifest.py#walk_files",
+      "evidence": "generator/manifest.py:1",
+      "rel": "defines",
+      "src": "script:generator/manifest.py"
     },
     {
       "dst": "script:generator/diagnostics.py",
@@ -47,6 +971,150 @@
       "dst": "script:generator/manifest.py",
       "evidence": "generator/project_graph.py:32",
       "rel": "requires",
+      "src": "script:generator/project_graph.py"
+    },
+    {
+      "dst": "symbol:generator/project_graph.py#_basenames",
+      "evidence": "generator/project_graph.py:1",
+      "rel": "defines",
+      "src": "script:generator/project_graph.py"
+    },
+    {
+      "dst": "symbol:generator/project_graph.py#_graph_blob",
+      "evidence": "generator/project_graph.py:1",
+      "rel": "defines",
+      "src": "script:generator/project_graph.py"
+    },
+    {
+      "dst": "symbol:generator/project_graph.py#_output_rels",
+      "evidence": "generator/project_graph.py:1",
+      "rel": "defines",
+      "src": "script:generator/project_graph.py"
+    },
+    {
+      "dst": "symbol:generator/project_graph.py#build_graph",
+      "evidence": "generator/project_graph.py:1",
+      "rel": "defines",
+      "src": "script:generator/project_graph.py"
+    },
+    {
+      "dst": "symbol:generator/project_graph.py#cfg_secret_globs",
+      "evidence": "generator/project_graph.py:1",
+      "rel": "defines",
+      "src": "script:generator/project_graph.py"
+    },
+    {
+      "dst": "symbol:generator/project_graph.py#cfg_skip_dirs",
+      "evidence": "generator/project_graph.py:1",
+      "rel": "defines",
+      "src": "script:generator/project_graph.py"
+    },
+    {
+      "dst": "symbol:generator/project_graph.py#cfg_skip_suffixes",
+      "evidence": "generator/project_graph.py:1",
+      "rel": "defines",
+      "src": "script:generator/project_graph.py"
+    },
+    {
+      "dst": "symbol:generator/project_graph.py#check",
+      "evidence": "generator/project_graph.py:1",
+      "rel": "defines",
+      "src": "script:generator/project_graph.py"
+    },
+    {
+      "dst": "symbol:generator/project_graph.py#classify",
+      "evidence": "generator/project_graph.py:1",
+      "rel": "defines",
+      "src": "script:generator/project_graph.py"
+    },
+    {
+      "dst": "symbol:generator/project_graph.py#cmd_build",
+      "evidence": "generator/project_graph.py:1",
+      "rel": "defines",
+      "src": "script:generator/project_graph.py"
+    },
+    {
+      "dst": "symbol:generator/project_graph.py#cmd_diagnostics",
+      "evidence": "generator/project_graph.py:1",
+      "rel": "defines",
+      "src": "script:generator/project_graph.py"
+    },
+    {
+      "dst": "symbol:generator/project_graph.py#cmd_manifest",
+      "evidence": "generator/project_graph.py:1",
+      "rel": "defines",
+      "src": "script:generator/project_graph.py"
+    },
+    {
+      "dst": "symbol:generator/project_graph.py#cmd_selftest",
+      "evidence": "generator/project_graph.py:1",
+      "rel": "defines",
+      "src": "script:generator/project_graph.py"
+    },
+    {
+      "dst": "symbol:generator/project_graph.py#collect",
+      "evidence": "generator/project_graph.py:1",
+      "rel": "defines",
+      "src": "script:generator/project_graph.py"
+    },
+    {
+      "dst": "symbol:generator/project_graph.py#default_config",
+      "evidence": "generator/project_graph.py:1",
+      "rel": "defines",
+      "src": "script:generator/project_graph.py"
+    },
+    {
+      "dst": "symbol:generator/project_graph.py#extract_edges",
+      "evidence": "generator/project_graph.py:1",
+      "rel": "defines",
+      "src": "script:generator/project_graph.py"
+    },
+    {
+      "dst": "symbol:generator/project_graph.py#is_binary",
+      "evidence": "generator/project_graph.py:1",
+      "rel": "defines",
+      "src": "script:generator/project_graph.py"
+    },
+    {
+      "dst": "symbol:generator/project_graph.py#is_secret_token",
+      "evidence": "generator/project_graph.py:1",
+      "rel": "defines",
+      "src": "script:generator/project_graph.py"
+    },
+    {
+      "dst": "symbol:generator/project_graph.py#load_config",
+      "evidence": "generator/project_graph.py:1",
+      "rel": "defines",
+      "src": "script:generator/project_graph.py"
+    },
+    {
+      "dst": "symbol:generator/project_graph.py#main",
+      "evidence": "generator/project_graph.py:1",
+      "rel": "defines",
+      "src": "script:generator/project_graph.py"
+    },
+    {
+      "dst": "symbol:generator/project_graph.py#nowstamp",
+      "evidence": "generator/project_graph.py:1",
+      "rel": "defines",
+      "src": "script:generator/project_graph.py"
+    },
+    {
+      "dst": "symbol:generator/project_graph.py#read_text",
+      "evidence": "generator/project_graph.py:1",
+      "rel": "defines",
+      "src": "script:generator/project_graph.py"
+    },
+    {
+      "dst": "symbol:generator/project_graph.py#secret_names_in",
+      "evidence": "generator/project_graph.py:1",
+      "rel": "defines",
+      "src": "script:generator/project_graph.py"
+    },
+    {
+      "dst": "symbol:generator/project_graph.py#write_fixture",
+      "evidence": "generator/project_graph.py:1",
+      "rel": "defines",
       "src": "script:generator/project_graph.py"
     },
     {
@@ -78,6 +1146,90 @@
       "evidence": ".github/workflows/graph-freshness.yml:81",
       "rel": "runs",
       "src": "workflow:.github/workflows/graph-freshness.yml"
+    },
+    {
+      "dst": "symbol:.github/workflows/graph-freshness.yml#jobs",
+      "evidence": ".github/workflows/graph-freshness.yml:1",
+      "rel": "defines",
+      "src": "workflow:.github/workflows/graph-freshness.yml"
+    },
+    {
+      "dst": "symbol:.github/workflows/graph-freshness.yml#jobs.graph-freshness",
+      "evidence": ".github/workflows/graph-freshness.yml:1",
+      "rel": "defines",
+      "src": "workflow:.github/workflows/graph-freshness.yml"
+    },
+    {
+      "dst": "symbol:.github/workflows/graph-freshness.yml#jobs.graph-freshness.env",
+      "evidence": ".github/workflows/graph-freshness.yml:1",
+      "rel": "defines",
+      "src": "workflow:.github/workflows/graph-freshness.yml"
+    },
+    {
+      "dst": "symbol:.github/workflows/graph-freshness.yml#jobs.graph-freshness.runs-on",
+      "evidence": ".github/workflows/graph-freshness.yml:1",
+      "rel": "defines",
+      "src": "workflow:.github/workflows/graph-freshness.yml"
+    },
+    {
+      "dst": "symbol:.github/workflows/graph-freshness.yml#jobs.graph-freshness.steps",
+      "evidence": ".github/workflows/graph-freshness.yml:1",
+      "rel": "defines",
+      "src": "workflow:.github/workflows/graph-freshness.yml"
+    },
+    {
+      "dst": "symbol:.github/workflows/graph-freshness.yml#name",
+      "evidence": ".github/workflows/graph-freshness.yml:1",
+      "rel": "defines",
+      "src": "workflow:.github/workflows/graph-freshness.yml"
+    },
+    {
+      "dst": "symbol:.github/workflows/graph-freshness.yml#on",
+      "evidence": ".github/workflows/graph-freshness.yml:1",
+      "rel": "defines",
+      "src": "workflow:.github/workflows/graph-freshness.yml"
+    },
+    {
+      "dst": "symbol:.github/workflows/graph-freshness.yml#on.pull_request",
+      "evidence": ".github/workflows/graph-freshness.yml:1",
+      "rel": "defines",
+      "src": "workflow:.github/workflows/graph-freshness.yml"
+    },
+    {
+      "dst": "symbol:.github/workflows/graph-freshness.yml#on.push",
+      "evidence": ".github/workflows/graph-freshness.yml:1",
+      "rel": "defines",
+      "src": "workflow:.github/workflows/graph-freshness.yml"
+    },
+    {
+      "dst": "symbol:.github/workflows/graph-freshness.yml#on.schedule",
+      "evidence": ".github/workflows/graph-freshness.yml:1",
+      "rel": "defines",
+      "src": "workflow:.github/workflows/graph-freshness.yml"
+    },
+    {
+      "dst": "symbol:.github/workflows/graph-freshness.yml#on.schedule.cron",
+      "evidence": ".github/workflows/graph-freshness.yml:1",
+      "rel": "defines",
+      "src": "workflow:.github/workflows/graph-freshness.yml"
+    },
+    {
+      "dst": "symbol:.github/workflows/graph-freshness.yml#on.workflow_dispatch",
+      "evidence": ".github/workflows/graph-freshness.yml:1",
+      "rel": "defines",
+      "src": "workflow:.github/workflows/graph-freshness.yml"
+    },
+    {
+      "dst": "symbol:.github/workflows/graph-freshness.yml#permissions",
+      "evidence": ".github/workflows/graph-freshness.yml:1",
+      "rel": "defines",
+      "src": "workflow:.github/workflows/graph-freshness.yml"
+    },
+    {
+      "dst": "symbol:.github/workflows/graph-freshness.yml#permissions.contents",
+      "evidence": ".github/workflows/graph-freshness.yml:1",
+      "rel": "defines",
+      "src": "workflow:.github/workflows/graph-freshness.yml"
     }
   ],
   "gaps": [
@@ -107,42 +1259,42 @@
       "item": ".github/workflows/graph-freshness.yml mentions secret-shaped name 'secret' (value not recorded)"
     },
     {
-      "evidence": "Documentation/architecture/codebase-graph.json:112",
+      "evidence": "Documentation/architecture/codebase-graph.json:1264",
       "id": "secret-name:Documentation/architecture/codebase-graph.json:api_key",
       "item": "Documentation/architecture/codebase-graph.json mentions secret-shaped name 'API_KEY' (value not recorded)"
     },
     {
-      "evidence": "Documentation/architecture/codebase-graph.json:117",
+      "evidence": "Documentation/architecture/codebase-graph.json:1269",
       "id": "secret-name:Documentation/architecture/codebase-graph.json:license_salt",
       "item": "Documentation/architecture/codebase-graph.json mentions secret-shaped name 'LICENSE_SALT' (value not recorded)"
     },
     {
-      "evidence": "Documentation/architecture/codebase-graph.json:117",
+      "evidence": "Documentation/architecture/codebase-graph.json:1269",
       "id": "secret-name:Documentation/architecture/codebase-graph.json:salt",
       "item": "Documentation/architecture/codebase-graph.json mentions secret-shaped name 'SALT' (value not recorded)"
     },
     {
-      "evidence": "Documentation/architecture/codebase-graph.json:127",
+      "evidence": "Documentation/architecture/codebase-graph.json:1279",
       "id": "secret-name:Documentation/architecture/codebase-graph.json:secret_basenames",
       "item": "Documentation/architecture/codebase-graph.json mentions secret-shaped name 'SECRET_BASENAMES' (value not recorded)"
     },
     {
-      "evidence": "Documentation/architecture/codebase-graph.json:132",
+      "evidence": "Documentation/architecture/codebase-graph.json:1284",
       "id": "secret-name:Documentation/architecture/codebase-graph.json:secret_globs",
       "item": "Documentation/architecture/codebase-graph.json mentions secret-shaped name 'SECRET_GLOBS' (value not recorded)"
     },
     {
-      "evidence": "Documentation/architecture/codebase-graph.json:137",
+      "evidence": "Documentation/architecture/codebase-graph.json:1289",
       "id": "secret-name:Documentation/architecture/codebase-graph.json:secret_single",
       "item": "Documentation/architecture/codebase-graph.json mentions secret-shaped name 'SECRET_SINGLE' (value not recorded)"
     },
     {
-      "evidence": "Documentation/architecture/codebase-graph.json:142",
+      "evidence": "Documentation/architecture/codebase-graph.json:1294",
       "id": "secret-name:Documentation/architecture/codebase-graph.json:secret_substrs",
       "item": "Documentation/architecture/codebase-graph.json mentions secret-shaped name 'SECRET_SUBSTRS' (value not recorded)"
     },
     {
-      "evidence": "Documentation/architecture/codebase-graph.json:147",
+      "evidence": "Documentation/architecture/codebase-graph.json:1299",
       "id": "secret-name:Documentation/architecture/codebase-graph.json:secret_token_re",
       "item": "Documentation/architecture/codebase-graph.json mentions secret-shaped name 'SECRET_TOKEN_RE' (value not recorded)"
     },
@@ -162,12 +1314,12 @@
       "item": "generator/diagnostics.py mentions secret-shaped name 'secret' (value not recorded)"
     },
     {
-      "evidence": "generator/extractors.py:36",
+      "evidence": "generator/extractors.py:91",
       "id": "secret-name:generator/extractors.py:sh_token_re",
       "item": "generator/extractors.py mentions secret-shaped name 'SH_TOKEN_RE' (value not recorded)"
     },
     {
-      "evidence": "generator/extractors.py:67",
+      "evidence": "generator/extractors.py:122",
       "id": "secret-name:generator/extractors.py:token",
       "item": "generator/extractors.py mentions secret-shaped name 'token' (value not recorded)"
     },
@@ -177,42 +1329,42 @@
       "item": "generator/manifest.py mentions secret-shaped name 'secret' (value not recorded)"
     },
     {
-      "evidence": "generator/project_graph.py:489",
+      "evidence": "generator/project_graph.py:535",
       "id": "secret-name:generator/project_graph.py:api_key",
       "item": "generator/project_graph.py mentions secret-shaped name 'API_KEY' (value not recorded)"
     },
     {
-      "evidence": "generator/project_graph.py:487",
+      "evidence": "generator/project_graph.py:533",
       "id": "secret-name:generator/project_graph.py:license_salt",
       "item": "generator/project_graph.py mentions secret-shaped name 'LICENSE_SALT' (value not recorded)"
     },
     {
-      "evidence": "generator/project_graph.py:85",
+      "evidence": "generator/project_graph.py:87",
       "id": "secret-name:generator/project_graph.py:salt",
       "item": "generator/project_graph.py mentions secret-shaped name 'SALT' (value not recorded)"
     },
     {
-      "evidence": "generator/project_graph.py:75",
+      "evidence": "generator/project_graph.py:77",
       "id": "secret-name:generator/project_graph.py:secret_basenames",
       "item": "generator/project_graph.py mentions secret-shaped name 'SECRET_BASENAMES' (value not recorded)"
     },
     {
-      "evidence": "generator/project_graph.py:77",
+      "evidence": "generator/project_graph.py:79",
       "id": "secret-name:generator/project_graph.py:secret_globs",
       "item": "generator/project_graph.py mentions secret-shaped name 'SECRET_GLOBS' (value not recorded)"
     },
     {
-      "evidence": "generator/project_graph.py:91",
+      "evidence": "generator/project_graph.py:93",
       "id": "secret-name:generator/project_graph.py:secret_single",
       "item": "generator/project_graph.py mentions secret-shaped name 'SECRET_SINGLE' (value not recorded)"
     },
     {
-      "evidence": "generator/project_graph.py:88",
+      "evidence": "generator/project_graph.py:90",
       "id": "secret-name:generator/project_graph.py:secret_substrs",
       "item": "generator/project_graph.py mentions secret-shaped name 'SECRET_SUBSTRS' (value not recorded)"
     },
     {
-      "evidence": "generator/project_graph.py:87",
+      "evidence": "generator/project_graph.py:89",
       "id": "secret-name:generator/project_graph.py:secret_token_re",
       "item": "generator/project_graph.py mentions secret-shaped name 'SECRET_TOKEN_RE' (value not recorded)"
     },
@@ -227,12 +1379,14 @@
       "item": "graph.config.json mentions secret-shaped name 'secrets_policy' (value not recorded)"
     }
   ],
-  "generated_at": "2026-11-21T17:45:51Z",
+  "generated_at": "2026-11-22T08:06:01Z",
   "nodes": [
     {
       "attrs": {
+        "lang": "yaml",
         "lines": 1090,
-        "path": ".cache-docs/openapi.yaml"
+        "path": ".cache-docs/openapi.yaml",
+        "purpose": ""
       },
       "id": "config:.cache-docs/openapi.yaml",
       "source": ".cache-docs/openapi.yaml",
@@ -240,8 +1394,10 @@
     },
     {
       "attrs": {
-        "lines": 189,
-        "path": ".githooks/pre-push"
+        "lang": "text",
+        "lines": 191,
+        "path": ".githooks/pre-push",
+        "purpose": "project-graph pre-push freshness gate (template hook; travels with the repo)."
       },
       "id": "config:.githooks/pre-push",
       "source": ".githooks/pre-push",
@@ -249,8 +1405,10 @@
     },
     {
       "attrs": {
-        "lines": 458,
-        "path": "Documentation/architecture/codebase-graph.json"
+        "lang": "json",
+        "lines": 3579,
+        "path": "Documentation/architecture/codebase-graph.json",
+        "purpose": ""
       },
       "id": "config:Documentation/architecture/codebase-graph.json",
       "source": "Documentation/architecture/codebase-graph.json",
@@ -258,8 +1416,10 @@
     },
     {
       "attrs": {
+        "lang": "text",
         "lines": 2,
-        "path": "graph-template-VERSION"
+        "path": "graph-template-VERSION",
+        "purpose": ""
       },
       "id": "config:graph-template-VERSION",
       "source": "graph-template-VERSION",
@@ -267,8 +1427,10 @@
     },
     {
       "attrs": {
+        "lang": "json",
         "lines": 20,
-        "path": "graph.config.json"
+        "path": "graph.config.json",
+        "purpose": ""
       },
       "id": "config:graph.config.json",
       "source": "graph.config.json",
@@ -276,8 +1438,10 @@
     },
     {
       "attrs": {
+        "lang": "json",
         "lines": 52,
-        "path": "manifest.schema.json"
+        "path": "manifest.schema.json",
+        "purpose": ""
       },
       "id": "config:manifest.schema.json",
       "source": "manifest.schema.json",
@@ -285,8 +1449,10 @@
     },
     {
       "attrs": {
+        "lang": "markdown",
         "lines": 38,
-        "path": "AGENTS.md"
+        "path": "AGENTS.md",
+        "purpose": "AGENTS.md \u2014 atomberg-local"
       },
       "id": "doc:AGENTS.md",
       "source": "AGENTS.md",
@@ -294,8 +1460,10 @@
     },
     {
       "attrs": {
+        "lang": "markdown",
         "lines": 187,
-        "path": "README.md"
+        "path": "README.md",
+        "purpose": "Atomberg Fan (Local LAN + Cloud) Control Guide"
       },
       "id": "doc:README.md",
       "source": "README.md",
@@ -303,8 +1471,10 @@
     },
     {
       "attrs": {
+        "lang": "bash",
         "lines": 226,
-        "path": ".github/tests/test-graph-freshness.sh"
+        "path": ".github/tests/test-graph-freshness.sh",
+        "purpose": "Self-test for .github/workflows/graph-freshness.yml (graph-freshness gate)."
       },
       "id": "script:.github/tests/test-graph-freshness.sh",
       "source": ".github/tests/test-graph-freshness.sh",
@@ -312,8 +1482,10 @@
     },
     {
       "attrs": {
+        "lang": "python",
         "lines": 77,
-        "path": "atomberg_listen_beacons.py"
+        "path": "atomberg_listen_beacons.py",
+        "purpose": ""
       },
       "id": "script:atomberg_listen_beacons.py",
       "source": "atomberg_listen_beacons.py",
@@ -321,8 +1493,10 @@
     },
     {
       "attrs": {
+        "lang": "python",
         "lines": 307,
-        "path": "atomberg_listen_state.py"
+        "path": "atomberg_listen_state.py",
+        "purpose": ""
       },
       "id": "script:atomberg_listen_state.py",
       "source": "atomberg_listen_state.py",
@@ -330,8 +1504,10 @@
     },
     {
       "attrs": {
+        "lang": "python",
         "lines": 54,
-        "path": "atomberg_local_discovery.py"
+        "path": "atomberg_local_discovery.py",
+        "purpose": ""
       },
       "id": "script:atomberg_local_discovery.py",
       "source": "atomberg_local_discovery.py",
@@ -339,8 +1515,10 @@
     },
     {
       "attrs": {
+        "lang": "python",
         "lines": 88,
-        "path": "atomberg_send_command.py"
+        "path": "atomberg_send_command.py",
+        "purpose": ""
       },
       "id": "script:atomberg_send_command.py",
       "source": "atomberg_send_command.py",
@@ -348,8 +1526,10 @@
     },
     {
       "attrs": {
+        "lang": "python",
         "lines": 74,
-        "path": "generator/diagnostics.py"
+        "path": "generator/diagnostics.py",
+        "purpose": "Diagnostics: gap summaries and graph drift for the template core."
       },
       "id": "script:generator/diagnostics.py",
       "source": "generator/diagnostics.py",
@@ -357,8 +1537,10 @@
     },
     {
       "attrs": {
-        "lines": 426,
-        "path": "generator/extractors.py"
+        "lang": "python",
+        "lines": 481,
+        "path": "generator/extractors.py",
+        "purpose": "Configurable edge-extractor registry for the project-graph template core."
       },
       "id": "script:generator/extractors.py",
       "source": "generator/extractors.py",
@@ -366,8 +1548,10 @@
     },
     {
       "attrs": {
+        "lang": "python",
         "lines": 193,
-        "path": "generator/manifest.py"
+        "path": "generator/manifest.py",
+        "purpose": "Manifest + fingerprint + incremental-build support."
       },
       "id": "script:generator/manifest.py",
       "source": "generator/manifest.py",
@@ -375,8 +1559,10 @@
     },
     {
       "attrs": {
-        "lines": 724,
-        "path": "generator/project_graph.py"
+        "lang": "python",
+        "lines": 803,
+        "path": "generator/project_graph.py",
+        "purpose": "Template project-graph generator core (stdlib only)."
       },
       "id": "script:generator/project_graph.py",
       "source": "generator/project_graph.py",
@@ -384,15 +1570,1937 @@
     },
     {
       "attrs": {
+        "kind": "config-key",
+        "parent": "",
+        "signature": "components = ..."
+      },
+      "id": "symbol:.cache-docs/openapi.yaml#components",
+      "source": ".cache-docs/openapi.yaml",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "components",
+        "signature": "components.securitySchemes = ..."
+      },
+      "id": "symbol:.cache-docs/openapi.yaml#components.securitySchemes",
+      "source": ".cache-docs/openapi.yaml",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "components.securitySchemes",
+        "signature": "components.securitySchemes.apikeyAuth = ..."
+      },
+      "id": "symbol:.cache-docs/openapi.yaml#components.securitySchemes.apikeyAuth",
+      "source": ".cache-docs/openapi.yaml",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "",
+        "signature": "info = ..."
+      },
+      "id": "symbol:.cache-docs/openapi.yaml#info",
+      "source": ".cache-docs/openapi.yaml",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "info",
+        "signature": "info.description = ..."
+      },
+      "id": "symbol:.cache-docs/openapi.yaml#info.description",
+      "source": ".cache-docs/openapi.yaml",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "info",
+        "signature": "info.title = ..."
+      },
+      "id": "symbol:.cache-docs/openapi.yaml#info.title",
+      "source": ".cache-docs/openapi.yaml",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "info",
+        "signature": "info.version = ..."
+      },
+      "id": "symbol:.cache-docs/openapi.yaml#info.version",
+      "source": ".cache-docs/openapi.yaml",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "",
+        "signature": "openapi = ..."
+      },
+      "id": "symbol:.cache-docs/openapi.yaml#openapi",
+      "source": ".cache-docs/openapi.yaml",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "",
+        "signature": "paths = ..."
+      },
+      "id": "symbol:.cache-docs/openapi.yaml#paths",
+      "source": ".cache-docs/openapi.yaml",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "paths",
+        "signature": "paths.get = ..."
+      },
+      "id": "symbol:.cache-docs/openapi.yaml#paths.get",
+      "source": ".cache-docs/openapi.yaml",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "paths.get",
+        "signature": "paths.get.description = ..."
+      },
+      "id": "symbol:.cache-docs/openapi.yaml#paths.get.description",
+      "source": ".cache-docs/openapi.yaml",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "paths.get",
+        "signature": "paths.get.parameters = ..."
+      },
+      "id": "symbol:.cache-docs/openapi.yaml#paths.get.parameters",
+      "source": ".cache-docs/openapi.yaml",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "paths.get",
+        "signature": "paths.get.responses = ..."
+      },
+      "id": "symbol:.cache-docs/openapi.yaml#paths.get.responses",
+      "source": ".cache-docs/openapi.yaml",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "paths.get",
+        "signature": "paths.get.security = ..."
+      },
+      "id": "symbol:.cache-docs/openapi.yaml#paths.get.security",
+      "source": ".cache-docs/openapi.yaml",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "paths.get",
+        "signature": "paths.get.summary = ..."
+      },
+      "id": "symbol:.cache-docs/openapi.yaml#paths.get.summary",
+      "source": ".cache-docs/openapi.yaml",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "paths.get",
+        "signature": "paths.get.tags = ..."
+      },
+      "id": "symbol:.cache-docs/openapi.yaml#paths.get.tags",
+      "source": ".cache-docs/openapi.yaml",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "paths",
+        "signature": "paths.post = ..."
+      },
+      "id": "symbol:.cache-docs/openapi.yaml#paths.post",
+      "source": ".cache-docs/openapi.yaml",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "paths.post",
+        "signature": "paths.post.description = ..."
+      },
+      "id": "symbol:.cache-docs/openapi.yaml#paths.post.description",
+      "source": ".cache-docs/openapi.yaml",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "paths.post",
+        "signature": "paths.post.parameters = ..."
+      },
+      "id": "symbol:.cache-docs/openapi.yaml#paths.post.parameters",
+      "source": ".cache-docs/openapi.yaml",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "paths.post",
+        "signature": "paths.post.requestBody = ..."
+      },
+      "id": "symbol:.cache-docs/openapi.yaml#paths.post.requestBody",
+      "source": ".cache-docs/openapi.yaml",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "paths.post",
+        "signature": "paths.post.responses = ..."
+      },
+      "id": "symbol:.cache-docs/openapi.yaml#paths.post.responses",
+      "source": ".cache-docs/openapi.yaml",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "paths.post",
+        "signature": "paths.post.security = ..."
+      },
+      "id": "symbol:.cache-docs/openapi.yaml#paths.post.security",
+      "source": ".cache-docs/openapi.yaml",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "paths.post",
+        "signature": "paths.post.summary = ..."
+      },
+      "id": "symbol:.cache-docs/openapi.yaml#paths.post.summary",
+      "source": ".cache-docs/openapi.yaml",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "paths.post",
+        "signature": "paths.post.tags = ..."
+      },
+      "id": "symbol:.cache-docs/openapi.yaml#paths.post.tags",
+      "source": ".cache-docs/openapi.yaml",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "",
+        "signature": "servers = ..."
+      },
+      "id": "symbol:.cache-docs/openapi.yaml#servers",
+      "source": ".cache-docs/openapi.yaml",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "servers",
+        "signature": "servers.url = ..."
+      },
+      "id": "symbol:.cache-docs/openapi.yaml#servers.url",
+      "source": ".cache-docs/openapi.yaml",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "",
+        "signature": "tags = ..."
+      },
+      "id": "symbol:.cache-docs/openapi.yaml#tags",
+      "source": ".cache-docs/openapi.yaml",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "tags",
+        "signature": "tags.name = ..."
+      },
+      "id": "symbol:.cache-docs/openapi.yaml#tags.name",
+      "source": ".cache-docs/openapi.yaml",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "tags.name",
+        "signature": "tags.name.description = ..."
+      },
+      "id": "symbol:.cache-docs/openapi.yaml#tags.name.description",
+      "source": ".cache-docs/openapi.yaml",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "bash-fn",
+        "parent": "",
+        "signature": "bad() { FAIL=$((FAIL+1)); echo ...; }"
+      },
+      "id": "symbol:.github/tests/test-graph-freshness.sh#bad",
+      "source": ".github/tests/test-graph-freshness.sh",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "bash-fn",
+        "parent": "",
+        "signature": "check_artifacts() { # $1 = root"
+      },
+      "id": "symbol:.github/tests/test-graph-freshness.sh#check_artifacts",
+      "source": ".github/tests/test-graph-freshness.sh",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "bash-fn",
+        "parent": "",
+        "signature": "check_fingerprint() { # $1 = root"
+      },
+      "id": "symbol:.github/tests/test-graph-freshness.sh#check_fingerprint",
+      "source": ".github/tests/test-graph-freshness.sh",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "bash-fn",
+        "parent": "",
+        "signature": "check_rebuild() { # $1 = root"
+      },
+      "id": "symbol:.github/tests/test-graph-freshness.sh#check_rebuild",
+      "source": ".github/tests/test-graph-freshness.sh",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "bash-fn",
+        "parent": "",
+        "signature": "check_schema() { # $1 = root"
+      },
+      "id": "symbol:.github/tests/test-graph-freshness.sh#check_schema",
+      "source": ".github/tests/test-graph-freshness.sh",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "bash-fn",
+        "parent": "",
+        "signature": "ok() { PASS=$((PASS+1)); echo ...; }"
+      },
+      "id": "symbol:.github/tests/test-graph-freshness.sh#ok",
+      "source": ".github/tests/test-graph-freshness.sh",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "bash-fn",
+        "parent": "",
+        "signature": "skip() { SKIP=$((SKIP+1)); echo ...; }"
+      },
+      "id": "symbol:.github/tests/test-graph-freshness.sh#skip",
+      "source": ".github/tests/test-graph-freshness.sh",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "bash-fn",
+        "parent": "",
+        "signature": "tracked_clean() { [ -z ...$ROOT... ]; }"
+      },
+      "id": "symbol:.github/tests/test-graph-freshness.sh#tracked_clean",
+      "source": ".github/tests/test-graph-freshness.sh",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "",
+        "signature": "jobs = ..."
+      },
+      "id": "symbol:.github/workflows/graph-freshness.yml#jobs",
+      "source": ".github/workflows/graph-freshness.yml",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "jobs",
+        "signature": "jobs.graph-freshness = ..."
+      },
+      "id": "symbol:.github/workflows/graph-freshness.yml#jobs.graph-freshness",
+      "source": ".github/workflows/graph-freshness.yml",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "jobs.graph-freshness",
+        "signature": "jobs.graph-freshness.env = ..."
+      },
+      "id": "symbol:.github/workflows/graph-freshness.yml#jobs.graph-freshness.env",
+      "source": ".github/workflows/graph-freshness.yml",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "jobs.graph-freshness",
+        "signature": "jobs.graph-freshness.runs-on = ..."
+      },
+      "id": "symbol:.github/workflows/graph-freshness.yml#jobs.graph-freshness.runs-on",
+      "source": ".github/workflows/graph-freshness.yml",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "jobs.graph-freshness",
+        "signature": "jobs.graph-freshness.steps = ..."
+      },
+      "id": "symbol:.github/workflows/graph-freshness.yml#jobs.graph-freshness.steps",
+      "source": ".github/workflows/graph-freshness.yml",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "",
+        "signature": "name = ..."
+      },
+      "id": "symbol:.github/workflows/graph-freshness.yml#name",
+      "source": ".github/workflows/graph-freshness.yml",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "",
+        "signature": "on = ..."
+      },
+      "id": "symbol:.github/workflows/graph-freshness.yml#on",
+      "source": ".github/workflows/graph-freshness.yml",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "on",
+        "signature": "on.pull_request = ..."
+      },
+      "id": "symbol:.github/workflows/graph-freshness.yml#on.pull_request",
+      "source": ".github/workflows/graph-freshness.yml",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "on",
+        "signature": "on.push = ..."
+      },
+      "id": "symbol:.github/workflows/graph-freshness.yml#on.push",
+      "source": ".github/workflows/graph-freshness.yml",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "on",
+        "signature": "on.schedule = ..."
+      },
+      "id": "symbol:.github/workflows/graph-freshness.yml#on.schedule",
+      "source": ".github/workflows/graph-freshness.yml",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "on.schedule",
+        "signature": "on.schedule.cron = ..."
+      },
+      "id": "symbol:.github/workflows/graph-freshness.yml#on.schedule.cron",
+      "source": ".github/workflows/graph-freshness.yml",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "on",
+        "signature": "on.workflow_dispatch = ..."
+      },
+      "id": "symbol:.github/workflows/graph-freshness.yml#on.workflow_dispatch",
+      "source": ".github/workflows/graph-freshness.yml",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "",
+        "signature": "permissions = ..."
+      },
+      "id": "symbol:.github/workflows/graph-freshness.yml#permissions",
+      "source": ".github/workflows/graph-freshness.yml",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "permissions",
+        "signature": "permissions.contents = ..."
+      },
+      "id": "symbol:.github/workflows/graph-freshness.yml#permissions.contents",
+      "source": ".github/workflows/graph-freshness.yml",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "section",
+        "parent": "",
+        "signature": "# AGENTS.md \u2014 atomberg-local"
+      },
+      "id": "symbol:AGENTS.md#AGENTS.md \u2014 atomberg-local",
+      "source": "AGENTS.md",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "section",
+        "parent": "AGENTS.md \u2014 atomberg-local",
+        "signature": "## Build / package / test"
+      },
+      "id": "symbol:AGENTS.md#Build / package / test",
+      "source": "AGENTS.md",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "section",
+        "parent": "AGENTS.md \u2014 atomberg-local",
+        "signature": "## Graph"
+      },
+      "id": "symbol:AGENTS.md#Graph",
+      "source": "AGENTS.md",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "section",
+        "parent": "AGENTS.md \u2014 atomberg-local",
+        "signature": "## Layout"
+      },
+      "id": "symbol:AGENTS.md#Layout",
+      "source": "AGENTS.md",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "section",
+        "parent": "AGENTS.md \u2014 atomberg-local",
+        "signature": "## Safety"
+      },
+      "id": "symbol:AGENTS.md#Safety",
+      "source": "AGENTS.md",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "section",
+        "parent": "AGENTS.md \u2014 atomberg-local",
+        "signature": "## What this is"
+      },
+      "id": "symbol:AGENTS.md#What this is",
+      "source": "AGENTS.md",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "section",
+        "parent": "",
+        "signature": "# Atomberg Fan (Local LAN + Cloud) Control Guide"
+      },
+      "id": "symbol:README.md#Atomberg Fan (Local LAN + Cloud) Control Guide",
+      "source": "README.md",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "section",
+        "parent": "Speed delta (+1/-1/etc)",
+        "signature": "## Cloud API option (read state + send speed)"
+      },
+      "id": "symbol:README.md#Cloud API option (read state + send speed)",
+      "source": "README.md",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "section",
+        "parent": "Cloud API option (read state + send speed)",
+        "signature": "### Cloud flow (high level)"
+      },
+      "id": "symbol:README.md#Cloud flow (high level)",
+      "source": "README.md",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "section",
+        "parent": "Read current state locally (UDP broadcast)",
+        "signature": "### How local state works"
+      },
+      "id": "symbol:README.md#How local state works",
+      "source": "README.md",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "section",
+        "parent": "Atomberg Fan (Local LAN + Cloud) Control Guide",
+        "signature": "## Identify a fan on the network (MAC \u2192 IP)"
+      },
+      "id": "symbol:README.md#Identify a fan on the network (MAC \u2192 IP)",
+      "source": "README.md",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "section",
+        "parent": "",
+        "signature": "# LED (light) OFF"
+      },
+      "id": "symbol:README.md#LED (light) OFF",
+      "source": "README.md",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "section",
+        "parent": "Requirements",
+        "signature": "### Machine requirements"
+      },
+      "id": "symbol:README.md#Machine requirements",
+      "source": "README.md",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "section",
+        "parent": "Push commands locally (set speed / power / LED)",
+        "signature": "### Multi-fan tip: always target by MAC (recommended)"
+      },
+      "id": "symbol:README.md#Multi-fan tip: always target by MAC (recommended)",
+      "source": "README.md",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "section",
+        "parent": "Requirements",
+        "signature": "### Network requirements (local LAN mode)"
+      },
+      "id": "symbol:README.md#Network requirements (local LAN mode)",
+      "source": "README.md",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "section",
+        "parent": "Cloud API option (read state + send speed)",
+        "signature": "### Notes"
+      },
+      "id": "symbol:README.md#Notes",
+      "source": "README.md",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "section",
+        "parent": "Push commands locally (set speed / power / LED)",
+        "signature": "### Other common local commands"
+      },
+      "id": "symbol:README.md#Other common local commands",
+      "source": "README.md",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "section",
+        "parent": "Identify a fan on the network (MAC \u2192 IP)",
+        "signature": "### Output you care about"
+      },
+      "id": "symbol:README.md#Output you care about",
+      "source": "README.md",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "section",
+        "parent": "",
+        "signature": "# Power OFF (equivalent to ...)"
+      },
+      "id": "symbol:README.md#Power OFF (equivalent to \"speed 0\")",
+      "source": "README.md",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "section",
+        "parent": "",
+        "signature": "# Power ON"
+      },
+      "id": "symbol:README.md#Power ON",
+      "source": "README.md",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "section",
+        "parent": "Atomberg Fan (Local LAN + Cloud) Control Guide",
+        "signature": "## Push commands locally (set speed / power / LED)"
+      },
+      "id": "symbol:README.md#Push commands locally (set speed / power / LED)",
+      "source": "README.md",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "section",
+        "parent": "Speed delta (+1/-1/etc)",
+        "signature": "## Read current state locally (UDP broadcast)"
+      },
+      "id": "symbol:README.md#Read current state locally (UDP broadcast)",
+      "source": "README.md",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "section",
+        "parent": "Read current state locally (UDP broadcast)",
+        "signature": "### Reliable way: listen + \u201cpoke\u201d (re-send a command while listening)"
+      },
+      "id": "symbol:README.md#Reliable way: listen + \u201cpoke\u201d (re-send a command while listening)",
+      "source": "README.md",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "section",
+        "parent": "Atomberg Fan (Local LAN + Cloud) Control Guide",
+        "signature": "## Requirements"
+      },
+      "id": "symbol:README.md#Requirements",
+      "source": "README.md",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "section",
+        "parent": "",
+        "signature": "# Speed delta (+1/-1/etc)"
+      },
+      "id": "symbol:README.md#Speed delta (+1/-1/etc)",
+      "source": "README.md",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "section",
+        "parent": "Identify a fan on the network (MAC \u2192 IP)",
+        "signature": "### Step 1 \u2014 Listen for beacons"
+      },
+      "id": "symbol:README.md#Step 1 \u2014 Listen for beacons",
+      "source": "README.md",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "section",
+        "parent": "Push commands locally (set speed / power / LED)",
+        "signature": "### Step 2 \u2014 Send speed (1..6)"
+      },
+      "id": "symbol:README.md#Step 2 \u2014 Send speed (1..6)",
+      "source": "README.md",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "section",
+        "parent": "Read current state locally (UDP broadcast)",
+        "signature": "### Step 3 \u2014 Listen for state updates"
+      },
+      "id": "symbol:README.md#Step 3 \u2014 Listen for state updates",
+      "source": "README.md",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "section",
+        "parent": "Push commands locally (set speed / power / LED)",
+        "signature": "### Supported speed range (important)"
+      },
+      "id": "symbol:README.md#Supported speed range (important)",
+      "source": "README.md",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "section",
+        "parent": "Speed delta (+1/-1/etc)",
+        "signature": "## Troubleshooting"
+      },
+      "id": "symbol:README.md#Troubleshooting",
+      "source": "README.md",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def listen_for_beacons(target_mac: str | None, seconds: float) -> int:"
+      },
+      "id": "symbol:atomberg_listen_beacons.py#listen_for_beacons",
+      "source": "atomberg_listen_beacons.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def main() -> int:"
+      },
+      "id": "symbol:atomberg_listen_beacons.py#main",
+      "source": "atomberg_listen_beacons.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "class",
+        "parent": "",
+        "signature": "class DecodedState:"
+      },
+      "id": "symbol:atomberg_listen_state.py#DecodedState",
+      "source": "atomberg_listen_state.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def _parse_int_auto(s: str) -> int:"
+      },
+      "id": "symbol:atomberg_listen_state.py#_parse_int_auto",
+      "source": "atomberg_listen_state.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def decode_state_value(value: int) -> DecodedState:"
+      },
+      "id": "symbol:atomberg_listen_state.py#decode_state_value",
+      "source": "atomberg_listen_state.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def listen_state(seconds: float, device_id_filter: str | None) -> int:"
+      },
+      "id": "symbol:atomberg_listen_state.py#listen_state",
+      "source": "atomberg_listen_state.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def main() -> int:"
+      },
+      "id": "symbol:atomberg_listen_state.py#main",
+      "source": "atomberg_listen_state.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def try_decode_udp_payload(data: bytes) -> dict | None:"
+      },
+      "id": "symbol:atomberg_listen_state.py#try_decode_udp_payload",
+      "source": "atomberg_listen_state.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "try_decode_udp_payload",
+        "signature": "def looks_like_hex(x: str) -> bool:"
+      },
+      "id": "symbol:atomberg_listen_state.py#try_decode_udp_payload.looks_like_hex",
+      "source": "atomberg_listen_state.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def discover_ip_by_mac(mac: str, *, seconds: float = 4.0, port: int = 5625) -> str:"
+      },
+      "id": "symbol:atomberg_local_discovery.py#discover_ip_by_mac",
+      "source": "atomberg_local_discovery.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def normalize_mac(mac: str) -> str:"
+      },
+      "id": "symbol:atomberg_local_discovery.py#normalize_mac",
+      "source": "atomberg_local_discovery.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def main() -> int:"
+      },
+      "id": "symbol:atomberg_send_command.py#main",
+      "source": "atomberg_send_command.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def diff_graphs(old, new):"
+      },
+      "id": "symbol:generator/diagnostics.py#diff_graphs",
+      "source": "generator/diagnostics.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "diff_graphs",
+        "signature": "def triple(e):"
+      },
+      "id": "symbol:generator/diagnostics.py#diff_graphs.triple",
+      "source": "generator/diagnostics.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def gap_category(gap_id):"
+      },
+      "id": "symbol:generator/diagnostics.py#gap_category",
+      "source": "generator/diagnostics.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def render(doc, old=None, label=..., old_label=...):"
+      },
+      "id": "symbol:generator/diagnostics.py#render",
+      "source": "generator/diagnostics.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def summarize_gaps(doc):"
+      },
+      "id": "symbol:generator/diagnostics.py#summarize_gaps",
+      "source": "generator/diagnostics.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "class",
+        "parent": "",
+        "signature": "class Ctx:"
+      },
+      "id": "symbol:generator/extractors.py#Ctx",
+      "source": "generator/extractors.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "method",
+        "parent": "Ctx",
+        "signature": "def __init__(self, nodes, alias, texts, index, basenames):"
+      },
+      "id": "symbol:generator/extractors.py#Ctx.__init__",
+      "source": "generator/extractors.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "method",
+        "parent": "Ctx",
+        "signature": "def add(self, src, dst, rel, evidence):"
+      },
+      "id": "symbol:generator/extractors.py#Ctx.add",
+      "source": "generator/extractors.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def dispatch_key(ntype, rel):"
+      },
+      "id": "symbol:generator/extractors.py#dispatch_key",
+      "source": "generator/extractors.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def enabled_extractors(cfg):"
+      },
+      "id": "symbol:generator/extractors.py#enabled_extractors",
+      "source": "generator/extractors.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def ex_asset(ctx, nid, rel, text, lines, src_dir):"
+      },
+      "id": "symbol:generator/extractors.py#ex_asset",
+      "source": "generator/extractors.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def ex_doc(ctx, nid, rel, text, lines, src_dir):"
+      },
+      "id": "symbol:generator/extractors.py#ex_doc",
+      "source": "generator/extractors.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def ex_driver_xml(ctx, nid, rel, text, lines, src_dir):"
+      },
+      "id": "symbol:generator/extractors.py#ex_driver_xml",
+      "source": "generator/extractors.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def ex_lua(ctx, nid, rel, text, lines, src_dir):"
+      },
+      "id": "symbol:generator/extractors.py#ex_lua",
+      "source": "generator/extractors.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def ex_manifest(ctx, nid, rel, text, lines, src_dir):"
+      },
+      "id": "symbol:generator/extractors.py#ex_manifest",
+      "source": "generator/extractors.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def ex_page(ctx, nid, rel, text, lines, src_dir):"
+      },
+      "id": "symbol:generator/extractors.py#ex_page",
+      "source": "generator/extractors.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def ex_script_go(ctx, nid, rel, text, lines, src_dir):"
+      },
+      "id": "symbol:generator/extractors.py#ex_script_go",
+      "source": "generator/extractors.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def ex_script_py(ctx, nid, rel, text, lines, src_dir):"
+      },
+      "id": "symbol:generator/extractors.py#ex_script_py",
+      "source": "generator/extractors.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def ex_script_sh(ctx, nid, rel, text, lines, src_dir):"
+      },
+      "id": "symbol:generator/extractors.py#ex_script_sh",
+      "source": "generator/extractors.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def ex_workflow(ctx, nid, rel, text, lines, src_dir):"
+      },
+      "id": "symbol:generator/extractors.py#ex_workflow",
+      "source": "generator/extractors.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def first_lineno(text, token):"
+      },
+      "id": "symbol:generator/extractors.py#first_lineno",
+      "source": "generator/extractors.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def is_external(ref):"
+      },
+      "id": "symbol:generator/extractors.py#is_external",
+      "source": "generator/extractors.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def lang_for(rel):"
+      },
+      "id": "symbol:generator/extractors.py#lang_for",
+      "source": "generator/extractors.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def lua_index(nodes):"
+      },
+      "id": "symbol:generator/extractors.py#lua_index",
+      "source": "generator/extractors.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def register(name, fn=None):"
+      },
+      "id": "symbol:generator/extractors.py#register",
+      "source": "generator/extractors.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "register",
+        "signature": "def wrap(fn):"
+      },
+      "id": "symbol:generator/extractors.py#register.wrap",
+      "source": "generator/extractors.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def resolve(ref, src_dir, alias):"
+      },
+      "id": "symbol:generator/extractors.py#resolve",
+      "source": "generator/extractors.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def resolve_lua(mod, src_rel, index, alias):"
+      },
+      "id": "symbol:generator/extractors.py#resolve_lua",
+      "source": "generator/extractors.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "resolve_lua",
+        "signature": "def score(rel):"
+      },
+      "id": "symbol:generator/extractors.py#resolve_lua.score",
+      "source": "generator/extractors.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def resolve_py(mod, src_rel, alias):"
+      },
+      "id": "symbol:generator/extractors.py#resolve_py",
+      "source": "generator/extractors.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def strip_qs(ref):"
+      },
+      "id": "symbol:generator/extractors.py#strip_qs",
+      "source": "generator/extractors.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def build_manifest(root, project, graph_blob, generated_at,"
+      },
+      "id": "symbol:generator/manifest.py#build_manifest",
+      "source": "generator/manifest.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def candidate_rels(root):"
+      },
+      "id": "symbol:generator/manifest.py#candidate_rels",
+      "source": "generator/manifest.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def changed_files(old, root):"
+      },
+      "id": "symbol:generator/manifest.py#changed_files",
+      "source": "generator/manifest.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def fingerprint(root, rels):"
+      },
+      "id": "symbol:generator/manifest.py#fingerprint",
+      "source": "generator/manifest.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def git_commit(root):"
+      },
+      "id": "symbol:generator/manifest.py#git_commit",
+      "source": "generator/manifest.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def load_manifest(path):"
+      },
+      "id": "symbol:generator/manifest.py#load_manifest",
+      "source": "generator/manifest.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def needs_rebuild(old, root):"
+      },
+      "id": "symbol:generator/manifest.py#needs_rebuild",
+      "source": "generator/manifest.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def rel_inside(root, path):"
+      },
+      "id": "symbol:generator/manifest.py#rel_inside",
+      "source": "generator/manifest.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def save_manifest(path, doc):"
+      },
+      "id": "symbol:generator/manifest.py#save_manifest",
+      "source": "generator/manifest.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def sha256_bytes(blob):"
+      },
+      "id": "symbol:generator/manifest.py#sha256_bytes",
+      "source": "generator/manifest.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def sha256_file(path):"
+      },
+      "id": "symbol:generator/manifest.py#sha256_file",
+      "source": "generator/manifest.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def tracked_files(root):"
+      },
+      "id": "symbol:generator/manifest.py#tracked_files",
+      "source": "generator/manifest.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def walk_files(root):"
+      },
+      "id": "symbol:generator/manifest.py#walk_files",
+      "source": "generator/manifest.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def _basenames(alias):"
+      },
+      "id": "symbol:generator/project_graph.py#_basenames",
+      "source": "generator/project_graph.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def _graph_blob(doc):"
+      },
+      "id": "symbol:generator/project_graph.py#_graph_blob",
+      "source": "generator/project_graph.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def _output_rels(root, paths):"
+      },
+      "id": "symbol:generator/project_graph.py#_output_rels",
+      "source": "generator/project_graph.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def build_graph(root, project, fixed_time=None, cfg=None):"
+      },
+      "id": "symbol:generator/project_graph.py#build_graph",
+      "source": "generator/project_graph.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def cfg_secret_globs(cfg):"
+      },
+      "id": "symbol:generator/project_graph.py#cfg_secret_globs",
+      "source": "generator/project_graph.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def cfg_skip_dirs(cfg):"
+      },
+      "id": "symbol:generator/project_graph.py#cfg_skip_dirs",
+      "source": "generator/project_graph.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def cfg_skip_suffixes(cfg):"
+      },
+      "id": "symbol:generator/project_graph.py#cfg_skip_suffixes",
+      "source": "generator/project_graph.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def check(name, cond, failures):"
+      },
+      "id": "symbol:generator/project_graph.py#check",
+      "source": "generator/project_graph.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def classify(rel, cfg=None):"
+      },
+      "id": "symbol:generator/project_graph.py#classify",
+      "source": "generator/project_graph.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def cmd_build(root, project, out, fixed_time, cfg=None,"
+      },
+      "id": "symbol:generator/project_graph.py#cmd_build",
+      "source": "generator/project_graph.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def cmd_diagnostics(graph_path, old_path):"
+      },
+      "id": "symbol:generator/project_graph.py#cmd_diagnostics",
+      "source": "generator/project_graph.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def cmd_manifest(root, project, graph_path, out, fixed_time, version):"
+      },
+      "id": "symbol:generator/project_graph.py#cmd_manifest",
+      "source": "generator/project_graph.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def cmd_selftest():"
+      },
+      "id": "symbol:generator/project_graph.py#cmd_selftest",
+      "source": "generator/project_graph.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def collect(root, cfg=None):"
+      },
+      "id": "symbol:generator/project_graph.py#collect",
+      "source": "generator/project_graph.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def default_config():"
+      },
+      "id": "symbol:generator/project_graph.py#default_config",
+      "source": "generator/project_graph.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def extract_edges(nodes, alias, texts, cfg=None):"
+      },
+      "id": "symbol:generator/project_graph.py#extract_edges",
+      "source": "generator/project_graph.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def is_binary(path):"
+      },
+      "id": "symbol:generator/project_graph.py#is_binary",
+      "source": "generator/project_graph.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def is_secret_token(tok):"
+      },
+      "id": "symbol:generator/project_graph.py#is_secret_token",
+      "source": "generator/project_graph.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def load_config(path):"
+      },
+      "id": "symbol:generator/project_graph.py#load_config",
+      "source": "generator/project_graph.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def main(argv):"
+      },
+      "id": "symbol:generator/project_graph.py#main",
+      "source": "generator/project_graph.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def nowstamp(fixed):"
+      },
+      "id": "symbol:generator/project_graph.py#nowstamp",
+      "source": "generator/project_graph.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def read_text(path):"
+      },
+      "id": "symbol:generator/project_graph.py#read_text",
+      "source": "generator/project_graph.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def secret_names_in(text):"
+      },
+      "id": "symbol:generator/project_graph.py#secret_names_in",
+      "source": "generator/project_graph.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "function",
+        "parent": "",
+        "signature": "def write_fixture(root):"
+      },
+      "id": "symbol:generator/project_graph.py#write_fixture",
+      "source": "generator/project_graph.py",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "",
+        "signature": "deterministic = ..."
+      },
+      "id": "symbol:graph.config.json#deterministic",
+      "source": "graph.config.json",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "",
+        "signature": "excludes = ..."
+      },
+      "id": "symbol:graph.config.json#excludes",
+      "source": "graph.config.json",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "",
+        "signature": "output = ..."
+      },
+      "id": "symbol:graph.config.json#output",
+      "source": "graph.config.json",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "",
+        "signature": "project = ..."
+      },
+      "id": "symbol:graph.config.json#project",
+      "source": "graph.config.json",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "",
+        "signature": "secrets_policy = ..."
+      },
+      "id": "symbol:graph.config.json#secrets_policy",
+      "source": "graph.config.json",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "",
+        "signature": "sources = ..."
+      },
+      "id": "symbol:graph.config.json#sources",
+      "source": "graph.config.json",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "",
+        "signature": "version = ..."
+      },
+      "id": "symbol:graph.config.json#version",
+      "source": "graph.config.json",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "",
+        "signature": "$schema = ..."
+      },
+      "id": "symbol:manifest.schema.json#$schema",
+      "source": "manifest.schema.json",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "",
+        "signature": "additionalProperties = ..."
+      },
+      "id": "symbol:manifest.schema.json#additionalProperties",
+      "source": "manifest.schema.json",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "",
+        "signature": "description = ..."
+      },
+      "id": "symbol:manifest.schema.json#description",
+      "source": "manifest.schema.json",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "",
+        "signature": "properties = ..."
+      },
+      "id": "symbol:manifest.schema.json#properties",
+      "source": "manifest.schema.json",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "properties",
+        "signature": "properties.drift = ..."
+      },
+      "id": "symbol:manifest.schema.json#properties.drift",
+      "source": "manifest.schema.json",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "properties.drift",
+        "signature": "properties.drift.type = ..."
+      },
+      "id": "symbol:manifest.schema.json#properties.drift.type",
+      "source": "manifest.schema.json",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "properties",
+        "signature": "properties.edges = ..."
+      },
+      "id": "symbol:manifest.schema.json#properties.edges",
+      "source": "manifest.schema.json",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "properties.edges",
+        "signature": "properties.edges.items = ..."
+      },
+      "id": "symbol:manifest.schema.json#properties.edges.items",
+      "source": "manifest.schema.json",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "properties.edges",
+        "signature": "properties.edges.type = ..."
+      },
+      "id": "symbol:manifest.schema.json#properties.edges.type",
+      "source": "manifest.schema.json",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "properties",
+        "signature": "properties.gaps = ..."
+      },
+      "id": "symbol:manifest.schema.json#properties.gaps",
+      "source": "manifest.schema.json",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "properties.gaps",
+        "signature": "properties.gaps.type = ..."
+      },
+      "id": "symbol:manifest.schema.json#properties.gaps.type",
+      "source": "manifest.schema.json",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "properties",
+        "signature": "properties.generated_at = ..."
+      },
+      "id": "symbol:manifest.schema.json#properties.generated_at",
+      "source": "manifest.schema.json",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "properties.generated_at",
+        "signature": "properties.generated_at.type = ..."
+      },
+      "id": "symbol:manifest.schema.json#properties.generated_at.type",
+      "source": "manifest.schema.json",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "properties",
+        "signature": "properties.nodes = ..."
+      },
+      "id": "symbol:manifest.schema.json#properties.nodes",
+      "source": "manifest.schema.json",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "properties.nodes",
+        "signature": "properties.nodes.items = ..."
+      },
+      "id": "symbol:manifest.schema.json#properties.nodes.items",
+      "source": "manifest.schema.json",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "properties.nodes",
+        "signature": "properties.nodes.type = ..."
+      },
+      "id": "symbol:manifest.schema.json#properties.nodes.type",
+      "source": "manifest.schema.json",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "properties",
+        "signature": "properties.source_commit = ..."
+      },
+      "id": "symbol:manifest.schema.json#properties.source_commit",
+      "source": "manifest.schema.json",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "properties.source_commit",
+        "signature": "properties.source_commit.type = ..."
+      },
+      "id": "symbol:manifest.schema.json#properties.source_commit.type",
+      "source": "manifest.schema.json",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "properties",
+        "signature": "properties.sources = ..."
+      },
+      "id": "symbol:manifest.schema.json#properties.sources",
+      "source": "manifest.schema.json",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "properties.sources",
+        "signature": "properties.sources.items = ..."
+      },
+      "id": "symbol:manifest.schema.json#properties.sources.items",
+      "source": "manifest.schema.json",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "properties.sources",
+        "signature": "properties.sources.type = ..."
+      },
+      "id": "symbol:manifest.schema.json#properties.sources.type",
+      "source": "manifest.schema.json",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "",
+        "signature": "required = ..."
+      },
+      "id": "symbol:manifest.schema.json#required",
+      "source": "manifest.schema.json",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "",
+        "signature": "title = ..."
+      },
+      "id": "symbol:manifest.schema.json#title",
+      "source": "manifest.schema.json",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "kind": "config-key",
+        "parent": "",
+        "signature": "type = ..."
+      },
+      "id": "symbol:manifest.schema.json#type",
+      "source": "manifest.schema.json",
+      "type": "symbol"
+    },
+    {
+      "attrs": {
+        "lang": "yaml",
         "lines": 148,
-        "path": ".github/workflows/graph-freshness.yml"
+        "path": ".github/workflows/graph-freshness.yml",
+        "purpose": "Graph-freshness gate: FAILS red on stale, PASSES green on fresh."
       },
       "id": "workflow:.github/workflows/graph-freshness.yml",
       "source": ".github/workflows/graph-freshness.yml",
       "type": "workflow"
     }
   ],
-  "source_commit": "da63954a848b51d4bfb831c5a440614503b7350b",
+  "source_commit": "8f5653804a8a1b4e549e0556ad55d7863718ad12",
   "sources": [
     {
       "path": ".cache-docs/openapi.yaml",
@@ -400,7 +3508,7 @@
     },
     {
       "path": ".githooks/pre-push",
-      "sha256": "ed37d80a903d049b088b17b313753b34007721041601c87dc3880af1485dbfd9"
+      "sha256": "a3763c70b67cebb7e078b8bff65ab6958f7f19b90ccb8639c866606fb9e26ba4"
     },
     {
       "path": ".github/tests/test-graph-freshness.sh",
@@ -416,7 +3524,7 @@
     },
     {
       "path": "Documentation/architecture/codebase-graph.json",
-      "sha256": "c05d2904ec61cd55795144a3c423fd89c0f15781f96097a41e0df877b41b195c"
+      "sha256": "c5741ae8c9eb4c6ccd64c04171629b131ad61d9c629ab19e039e9f2e36621c6e"
     },
     {
       "path": "README.md",
@@ -444,7 +3552,7 @@
     },
     {
       "path": "generator/extractors.py",
-      "sha256": "8e214e66aa23c043994b394f700d138502d6038bd2d6ff9a2e79b446e118b3fa"
+      "sha256": "dda3496c39625d5110557af5fdd4cf2a7baa32cbc975f03e8f33a7b43facd3df"
     },
     {
       "path": "generator/manifest.py",
@@ -452,7 +3560,7 @@
     },
     {
       "path": "generator/project_graph.py",
-      "sha256": "9ed2745480bf96220bddbe4fe96e31897bf15d8aef6d25ef663202ab990eeac4"
+      "sha256": "847d0525d50a9a19ab45ef056b0b324ef6cee3a91660714e1953588cc688ca3a"
     },
     {
       "path": "graph-template-VERSION",
