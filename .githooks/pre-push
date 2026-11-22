@@ -72,7 +72,7 @@ if missing:
     print("SCHEMA: missing keys: %s" % ", ".join(missing))
     sys.exit(1)
 allowed = {"lua", "driver-xml", "manifest", "script", "workflow",
-           "doc", "page", "asset", "config", "vendor"}
+           "doc", "page", "asset", "config", "vendor", "symbol"}
 for n in doc.get("nodes", []):
     if not ({"id", "type", "source", "attrs"} <= set(n)):
         print("SCHEMA: node with bad keys: %s" % sorted(n.keys()))
@@ -140,11 +140,13 @@ def norm(path):
     doc["source_commit"] = "C"
     # Self-ingest: the generator scans its own output file, so a rebuild
     # run against a tree that already contains the committed graph carries
-    # one extra node/edges/gaps/sources for that file. Drop every entry
+    # extra nodes/edges/gaps/sources for that file. Drop every entry
     # derived from the output path before comparing (volatile keys +
     # self-entries dropped, per Documentation/graph-refresh.md).
+    # Source match (not id split): symbol ids carry a #qualname fragment,
+    # so an id-partition check would miss symbol self-entries.
     self_ids = {n["id"] for n in doc.get("nodes", [])
-                if n["id"].partition(":")[2] == fixed_out}
+                if n.get("source") == fixed_out}
     doc["nodes"] = sorted(
         (n for n in doc.get("nodes", []) if n["id"] not in self_ids),
         key=lambda n: n["id"])

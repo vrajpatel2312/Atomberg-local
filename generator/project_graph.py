@@ -51,9 +51,11 @@ import tempfile
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from extractors import (  # noqa: E402
-    EXTRACTORS, Ctx, dispatch_key, enabled_extractors, lua_index,
+    EXTRACTORS, Ctx, dispatch_key, enabled_extractors, lang_for,
+    lua_index,
 )
 from extractors import first_lineno as _first_lineno  # noqa: E402
+import graph_symbols as _symbols  # noqa: E402 (stdlib-only outline I1)
 from manifest import (  # noqa: E402
     build_manifest, candidate_rels, git_commit, load_manifest,
     needs_rebuild, rel_inside, save_manifest, sha256_bytes, sha256_file,
@@ -64,7 +66,7 @@ SCHEMA_KEYS = ["nodes", "edges", "sources", "gaps", "drift",
                "generated_at", "source_commit"]
 
 ALLOWED_TYPES = ["lua", "driver-xml", "manifest", "script", "workflow",
-                 "doc", "page", "asset", "config", "vendor"]
+                 "doc", "page", "asset", "config", "vendor", "symbol"]
 
 SKIP_DIRS = {".git", "node_modules", "dist", "build", "__pycache__",
              ".venv", "venv"}
@@ -259,12 +261,21 @@ def collect(root, cfg=None):
                 del alias[rel]
                 continue
             texts[nid] = text
+        lang = lang_for(rel)
+        purpose = ""
+        if text is not None:
+            try:
+                purpose = _symbols.purpose(rel, text) or ""
+            except Exception:
+                purpose = ""
         if ntype in ("asset", "vendor"):
-            attrs = {"path": rel, "bytes": size}
+            attrs = {"path": rel, "bytes": size,
+                     "purpose": purpose[:120], "lang": lang}
         else:
             attrs = {"path": rel,
                      "lines": text.count("\n") + 1 if text is not None
-                     else 0}
+                     else 0,
+                     "purpose": purpose[:120], "lang": lang}
         nodes[nid] = {"id": nid, "type": ntype, "source": rel,
                       "attrs": attrs}
     # Point dupes at their canonical node id.
@@ -351,15 +362,50 @@ def build_graph(root, project, fixed_time=None, cfg=None):
                     rel, first_lineno(texts[nid], name))})
     gaps = sorted(gaps, key=lambda g: g["id"])
 
+    # Committed outline layer (Gate 1 storage C hybrid, S4): one symbol
+    # node per outline entry (stdlib graph_symbols outline, no line
+    # numbers in the committed graph) + a defines edge file -> symbol.
+    # Deterministic: outline() sorts by (line_start, name); symbol ids
+    # and edges are sorted below. Secrets: signatures are literal-scrubbed
+    # by graph_symbols; values never enter attrs.
+    outline_edges = []
+    for nid in sorted(texts):
+        _, _, rel = nid.partition(":")
+        try:
+            entries = _symbols.outline(rel, texts[nid])
+        except Exception:
+            entries = []
+        seen = set()
+        for entry in entries or []:
+            qualname = entry.get("qualname") or entry.get("name") or ""
+            if not qualname or qualname in seen:
+                continue
+            seen.add(qualname)
+            sym_id = "symbol:%s#%s" % (rel, qualname)
+            if sym_id not in nodes:
+                nodes[sym_id] = {
+                    "id": sym_id,
+                    "type": "symbol",
+                    "source": rel,
+                    "attrs": {
+                        "kind": entry.get("kind", ""),
+                        "parent": entry.get("parent", ""),
+                        "signature": (entry.get("signature", "") or "")[:120],
+                    },
+                }
+            outline_edges.append((nid, sym_id, "defines", "%s:1" % rel))
+    edges = sorted(set(edges) | set(outline_edges))
+
     node_list = sorted(nodes.values(), key=lambda n: n["id"])
     edge_list = [{"src": s, "dst": d, "rel": r, "evidence": e}
                  for s, d, r, e in edges]
     # Every ingested path (canonical and dupe) is fingerprinted.
+    # Symbol nodes share their file's source and are never fingerprinted
+    # on their own (their id carries a #qualname fragment, not a path).
     by_node = {}
     for rel, nid in alias.items():
         by_node.setdefault(nid, []).append(rel)
-    all_rels = sorted({r for nid in nodes
-                       for r in by_node.get(nid, [nid.partition(":")[2]])})
+    all_rels = sorted(alias.keys())
     sources = [{"path": rel,
                 "sha256": sha256_file(os.path.join(root, rel))}
                for rel in all_rels]
@@ -497,7 +543,8 @@ SELFTEST_MODULES = ("project_graph.py", "extractors.py", "manifest.py",
 
 # Sibling template-core modules: local first-party imports, not a
 # framework and not third-party (the core stays stdlib + itself only).
-SELFTEST_LOCAL = {"extractors", "manifest", "diagnostics"}
+SELFTEST_LOCAL = {"extractors", "manifest", "diagnostics",
+                    "graph_symbols"}
 
 
 def write_fixture(root):
@@ -588,6 +635,37 @@ def cmd_selftest():
         check("secret name gap, no value", any(
             "LICENSE_SALT" in g["item"] for g in doc["gaps"])
             and "supersecretvalue" not in blob, failures)
+        # Committed outline layer (S4): purpose/lang on file nodes, symbol
+        # nodes with kind/parent/signature only, defines edges file->symbol.
+        file_nodes = [n for n in doc["nodes"]
+                      if not n["id"].startswith("symbol:")]
+        sym_nodes = [n for n in doc["nodes"]
+                     if n["id"].startswith("symbol:")]
+        check("file nodes carry purpose/lang",
+              all({"purpose", "lang"} <= set(n["attrs"])
+                  for n in file_nodes
+                  if n["type"] not in ("asset", "vendor"))
+              and all({"purpose", "lang"} <= set(n["attrs"])
+                      for n in file_nodes
+                      if n["type"] in ("asset", "vendor")), failures)
+        check("purpose <= 120 chars",
+              all(len(n["attrs"].get("purpose", "")) <= 120
+                  for n in file_nodes), failures)
+        check("symbol nodes exist", len(sym_nodes) > 0, failures)
+        check("symbol attrs kind/parent/signature only",
+              all(set(n.get("attrs", {})) == {"kind", "parent", "signature"}
+                  for n in sym_nodes), failures)
+        check("symbol signatures <= 120 chars",
+              all(len(n["attrs"].get("signature", "")) <= 120
+                  for n in sym_nodes), failures)
+        defines = [e for e in doc["edges"] if e["rel"] == "defines"]
+        check("defines edges cover every symbol",
+              len(defines) > 0 and
+              sorted(e["dst"] for e in defines) ==
+              sorted(n["id"] for n in sym_nodes), failures)
+        check("py outline symbol present", any(
+            n["id"] == "symbol:helper.py#helper" for n in sym_nodes),
+            failures)
         # Configurable extractor: disabling lua kills lua requires edges
         # while lua nodes stay.
         nodoc = build_graph(tmp, "demo", FIXED_TIME,
@@ -599,7 +677,8 @@ def cmd_selftest():
                         if n["id"].startswith("lua:")), failures)
         check("extractor off: lua requires edges gone",
               not [e for e in nodoc["edges"]
-                   if e["src"].startswith("lua:")], failures)
+                   if e["src"].startswith("lua:")
+                   and e["rel"] == "requires"], failures)
         # Determinism: rebuild byte-identical.
         blob1 = json.dumps(build_graph(tmp, "demo", FIXED_TIME),
                            indent=2, sort_keys=True) + "\n"
