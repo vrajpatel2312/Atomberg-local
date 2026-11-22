@@ -17,6 +17,61 @@ import re
 import sys
 
 # --------------------------------------------------------------------------
+# Language tag for file nodes (committed outline layer, Gate 1 C hybrid).
+# purpose() lives in graph_symbols.py (I1); lang lives here so the core
+# stays a thin assembler and per-project configs can reuse it.
+# --------------------------------------------------------------------------
+
+LANG_BY_EXT = {
+    ".py": "python",
+    ".sh": "bash",
+    ".ps1": "powershell",
+    ".psm1": "powershell",
+    ".lua": "lua",
+    ".js": "javascript",
+    ".mjs": "javascript",
+    ".cjs": "javascript",
+    ".php": "php",
+    ".go": "go",
+    ".md": "markdown",
+    ".markdown": "markdown",
+    ".html": "html",
+    ".htm": "html",
+    ".css": "css",
+    ".json": "json",
+    ".yaml": "yaml",
+    ".yml": "yaml",
+    ".toml": "toml",
+    ".xml": "xml",
+    ".service": "ini",
+    ".timer": "ini",
+    ".socket": "ini",
+    ".target": "ini",
+    ".path": "ini",
+    ".mount": "ini",
+    ".txt": "text",
+}
+
+
+def lang_for(rel):
+    """Language tag for a repo-relative path (deterministic, stdlib only)."""
+    base = rel.rsplit("/", 1)[-1]
+    low = base.lower()
+    if base == "Dockerfile" or low.startswith("dockerfile."):
+        return "dockerfile"
+    if base == "driver.xml":
+        return "xml"
+    _, dot, ext = low.rpartition(".")
+    if dot:
+        ext = "." + ext
+        if ext in LANG_BY_EXT:
+            return LANG_BY_EXT[ext]
+        if len(ext) <= 7:
+            return ext[1:]
+    return "text"
+
+
+# --------------------------------------------------------------------------
 # Shared matching helpers (also used by the core for gap evidence lines).
 # --------------------------------------------------------------------------
 
