@@ -1535,42 +1535,42 @@
       "item": ".github/workflows/graph-freshness.yml mentions secret-shaped name 'secret' (value not recorded)"
     },
     {
-      "evidence": "Documentation/architecture/codebase-graph.json:1264",
+      "evidence": "Documentation/architecture/codebase-graph.json:1540",
       "id": "secret-name:Documentation/architecture/codebase-graph.json:api_key",
       "item": "Documentation/architecture/codebase-graph.json mentions secret-shaped name 'API_KEY' (value not recorded)"
     },
     {
-      "evidence": "Documentation/architecture/codebase-graph.json:1269",
+      "evidence": "Documentation/architecture/codebase-graph.json:1545",
       "id": "secret-name:Documentation/architecture/codebase-graph.json:license_salt",
       "item": "Documentation/architecture/codebase-graph.json mentions secret-shaped name 'LICENSE_SALT' (value not recorded)"
     },
     {
-      "evidence": "Documentation/architecture/codebase-graph.json:1269",
+      "evidence": "Documentation/architecture/codebase-graph.json:1545",
       "id": "secret-name:Documentation/architecture/codebase-graph.json:salt",
       "item": "Documentation/architecture/codebase-graph.json mentions secret-shaped name 'SALT' (value not recorded)"
     },
     {
-      "evidence": "Documentation/architecture/codebase-graph.json:1279",
+      "evidence": "Documentation/architecture/codebase-graph.json:1555",
       "id": "secret-name:Documentation/architecture/codebase-graph.json:secret_basenames",
       "item": "Documentation/architecture/codebase-graph.json mentions secret-shaped name 'SECRET_BASENAMES' (value not recorded)"
     },
     {
-      "evidence": "Documentation/architecture/codebase-graph.json:1284",
+      "evidence": "Documentation/architecture/codebase-graph.json:1560",
       "id": "secret-name:Documentation/architecture/codebase-graph.json:secret_globs",
       "item": "Documentation/architecture/codebase-graph.json mentions secret-shaped name 'SECRET_GLOBS' (value not recorded)"
     },
     {
-      "evidence": "Documentation/architecture/codebase-graph.json:1289",
+      "evidence": "Documentation/architecture/codebase-graph.json:1565",
       "id": "secret-name:Documentation/architecture/codebase-graph.json:secret_single",
       "item": "Documentation/architecture/codebase-graph.json mentions secret-shaped name 'SECRET_SINGLE' (value not recorded)"
     },
     {
-      "evidence": "Documentation/architecture/codebase-graph.json:1294",
+      "evidence": "Documentation/architecture/codebase-graph.json:1570",
       "id": "secret-name:Documentation/architecture/codebase-graph.json:secret_substrs",
       "item": "Documentation/architecture/codebase-graph.json mentions secret-shaped name 'SECRET_SUBSTRS' (value not recorded)"
     },
     {
-      "evidence": "Documentation/architecture/codebase-graph.json:1299",
+      "evidence": "Documentation/architecture/codebase-graph.json:1575",
       "id": "secret-name:Documentation/architecture/codebase-graph.json:secret_token_re",
       "item": "Documentation/architecture/codebase-graph.json mentions secret-shaped name 'SECRET_TOKEN_RE' (value not recorded)"
     },
@@ -1695,7 +1695,7 @@
       "item": "graph.config.json mentions secret-shaped name 'secrets_policy' (value not recorded)"
     }
   ],
-  "generated_at": "2026-11-22T08:09:33Z",
+  "generated_at": "2026-11-28T01:47:26Z",
   "nodes": [
     {
       "attrs": {
@@ -1722,7 +1722,7 @@
     {
       "attrs": {
         "lang": "json",
-        "lines": 3579,
+        "lines": 4360,
         "path": "Documentation/architecture/codebase-graph.json",
         "purpose": ""
       },
@@ -4277,7 +4277,7 @@
       "type": "workflow"
     }
   ],
-  "source_commit": "5be0fd83417561681a5d15997a7a582c8f1cb1dc",
+  "source_commit": "bfa27c59f502d247fbfcd37b793cef1216056d7d",
   "sources": [
     {
       "path": ".cache-docs/openapi.yaml",
@@ -4301,7 +4301,7 @@
     },
     {
       "path": "Documentation/architecture/codebase-graph.json",
-      "sha256": "a7a2be569f1373f250a5ef389ef17b27a1025390374312f83d05d2a51137dd31"
+      "sha256": "9fbe74b744ad0c63daae2d23e2da33e8824ba882dd274fcbdc02947832dff225"
     },
     {
       "path": "README.md",
